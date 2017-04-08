@@ -20,13 +20,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
+import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEntity;
 import org.cloudbus.cloudsim.core.SimEvent;
+import org.cloudbus.cloudsim.util.DisplayUtil;
 import org.workflowsim.reclustering.ReclusteringEngine;
+import org.workflowsim.utils.DFSCatalog;
 import org.workflowsim.utils.Parameters;
 
 /**
@@ -273,7 +277,17 @@ public final class WorkflowEngine extends SimEntity {
      * @post $none
      */
     protected void submitJobs() {
-
+    	
+        // Peerasak
+    	if(isDfs && !isFilesDistributed){   		
+            // Log.printLine(CloudSim.clock() + ": " + getName() + " : distributedFile(): Cloudlet List received with " + getJobsList().size() + " record(s)");
+            
+        	// DisplayUtil.displayVmList(getAllVmList());
+        	// DisplayUtil.displayExtendedCloudletList(getJobsList());    
+    		
+        	isFilesDistributed = distributedFile();
+    	}
+    	
         List<Job> list = getJobsList();
         Map<Integer, List> allocationList = new HashMap<>();
         for (int i = 0; i < getSchedulers().size(); i++) {
@@ -347,6 +361,31 @@ public final class WorkflowEngine extends SimEntity {
             }
         }
     }
+    
+    /**
+     * Add by Peerasak
+     */
+    
+    private boolean isDfs = false;
+    private boolean isFilesDistributed = false;
+    
+    private boolean distributedFile(){    	    	
+    	boolean result = DFSCatalog.initialDFSCatalog(getJobsList());
+    	
+    	if(result){
+    		DFSCatalog.printDFSCatalog(getJobsList());
+    	}
+    	
+    	return result;
+    }
+    
+	public boolean isDfs() {
+		return isDfs;
+	}
+
+	public void setDfs(boolean isDfs) {
+		this.isDfs = isDfs;
+	}
 
     /*
      * (non-Javadoc)

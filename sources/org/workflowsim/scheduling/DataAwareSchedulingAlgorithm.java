@@ -37,7 +37,8 @@ public class DataAwareSchedulingAlgorithm extends BaseSchedulingAlgorithm {
         super();
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void run() {
 
         

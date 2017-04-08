@@ -42,7 +42,8 @@ public class MaxMinSchedulingAlgorithm extends BaseSchedulingAlgorithm {
      */
     private final List<Boolean> hasChecked = new ArrayList<>();
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void run() {
 
 

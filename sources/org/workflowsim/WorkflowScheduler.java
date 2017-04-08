@@ -15,26 +15,36 @@
  */
 package org.workflowsim;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
+import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.lists.VmList;
+import org.cloudbus.cloudsim.util.JavaUtil;
 import org.workflowsim.failure.FailureGenerator;
-import org.workflowsim.scheduling.DataAwareSchedulingAlgorithm;
 import org.workflowsim.scheduling.BaseSchedulingAlgorithm;
+import org.workflowsim.scheduling.DataAwareSchedulingAlgorithm;
 import org.workflowsim.scheduling.FCFSSchedulingAlgorithm;
 import org.workflowsim.scheduling.MCTSchedulingAlgorithm;
 import org.workflowsim.scheduling.MaxMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.MinMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.RoundRobinSchedulingAlgorithm;
 import org.workflowsim.scheduling.StaticSchedulingAlgorithm;
+import org.workflowsim.scheduling.mapreduce.DataAwareMapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.DelayMapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.FCFSMapReduceAlgorithm;
+import org.workflowsim.utils.JobScheduledResult;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.Parameters.SchedulingAlgorithm;
+import org.workflowsim.utils.TaskScheduledResult;
+import org.workflowsim.utils.VmRelationship;
 
 /**
  * WorkflowScheduler represents a algorithm acting on behalf of a user. It hides
@@ -163,6 +173,15 @@ public class WorkflowScheduler extends DatacenterBroker {
             case ROUNDROBIN:
                 algorithm = new RoundRobinSchedulingAlgorithm();
                 break;
+            case FCFS_MR:
+            	algorithm = new FCFSMapReduceAlgorithm();
+            	break;
+            case DATA_MR:
+            	algorithm = new DataAwareMapReduceAlgorithm();
+            	break;
+            case DELAY_MR:
+            	algorithm = new DelayMapReduceAlgorithm();
+            	break;
             default:
                 algorithm = new StaticSchedulingAlgorithm();
                 break;
@@ -237,6 +256,13 @@ public class WorkflowScheduler extends DatacenterBroker {
      */
     protected void processCloudletUpdate(SimEvent ev) {
 
+    	// Peerasak
+        // Log.printLine();
+        // Log.printLine(getName() + ": processCloudletUpdate(SimEvent ev) by WorkflowSimTags.CLOUDLET_UPDATE)");
+        
+        // int preSize = getCloudletList().size();
+        // Log.printLine(getName() + ": processCloudletUpdate(SimEvent ev) by WorkflowSimTags.CLOUDLET_UPDATE): " + preSize);
+
         BaseSchedulingAlgorithm scheduler = getScheduler(Parameters.getSchedulingAlgorithm());
         scheduler.setCloudletList(getCloudletList());
         scheduler.setVmList(getVmsCreatedList());
@@ -246,7 +272,7 @@ public class WorkflowScheduler extends DatacenterBroker {
         } catch (Exception e) {
             Log.printLine("Error in configuring scheduler_method");
             e.printStackTrace();
-        }
+        }        
 
         List<Cloudlet> scheduledList = scheduler.getScheduledList();
         for (Cloudlet cloudlet : scheduledList) {
@@ -255,11 +281,51 @@ public class WorkflowScheduler extends DatacenterBroker {
             if (Parameters.getOverheadParams().getQueueDelay() != null) {
                 delay = Parameters.getOverheadParams().getQueueDelay(cloudlet);
             }
+            
+
+            Job job = (Job) cloudlet;
+            
+/*            CondorVM vm = VmList.getById(getVmList(), vmId);
+            Host host = vm.getHost();
+            
+            int taskId = 0;
+            
+            if(!JavaUtil.isNull(job.getTaskList()) && !job.getTaskList().isEmpty()){
+            	taskId = job.getTaskList().get(0).getCloudletId();
+            }*/
+            
+            // Log.printLine(CloudSim.clock() + ": " + getName() + ": Sending Job ID: " + job.getCloudletId() + " : User task ID: " + taskId + " to VM ID: " + vmId + " of Host ID: " + host.getId());
+            
+            // cloudletScheduleResultList.add(new CloudletScheduleResult(cloudlet, vm, host, getCloudletList().size(), scheduledList.size()));
+            // taskScheduledResultList.add(new TaskScheduledResult((Task) cloudlet, vm, host, getCloudletList().size(), scheduledList.size()));
+            // jobScheduledResultList.add(new JobScheduledResult((Job) cloudlet, vm, host, getCloudletList().size(), scheduledList.size()));
+            
+            updateLocalityAfterScheduled(job);
+            
+            scheduledJob.add(job.getCloudletId());
+            
             schedule(getVmsToDatacentersMap().get(vmId), delay, CloudSimTags.CLOUDLET_SUBMIT, cloudlet);
-        }
+        }                
         getCloudletList().removeAll(scheduledList);
         getCloudletSubmittedList().addAll(scheduledList);
         cloudletsSubmitted += scheduledList.size();
+    }
+    
+    private void updateLocalityAfterScheduled(Job job){
+        for (Task task : job.getTaskList()) {
+        	task.setLocalityType(VmRelationship.getRelationshipType(job.getVmId(), task.getDataStoredVmId()));
+        	task.setLocalityPenaltyLength(task.getLocalityType().penaltyLenght());
+        	
+        	job.setLocalityType(task.getLocalityType());
+        	job.setLocalityPenaltyLength(task.getLocalityPenaltyLength());
+        	job.setCloudletLength(job.getCloudletLength() + job.getLocalityPenaltyLength());
+        }
+    }
+    
+    private List<Integer> scheduledJob = new ArrayList<Integer>();
+    
+    public List<Integer> getScheduledJob(){
+    	return scheduledJob;
     }
 
     /**
@@ -330,8 +396,8 @@ public class WorkflowScheduler extends DatacenterBroker {
      * Submit cloudlets (jobs) to the created VMs. Scheduling is here
      */
     @Override
-    protected void submitCloudlets() {
-        sendNow(this.workflowEngineId, CloudSimTags.CLOUDLET_SUBMIT, null);
+    protected void submitCloudlets() {	    	
+        sendNow(this.workflowEngineId, CloudSimTags.CLOUDLET_SUBMIT, getVmList());
     }
     /**
      * A trick here. Assure that we just submit it once
@@ -346,7 +412,7 @@ public class WorkflowScheduler extends DatacenterBroker {
     protected void processCloudletSubmit(SimEvent ev) {
         List<Job> list = (List) ev.getData();
         getCloudletList().addAll(list);
-
+        
         sendNow(this.getId(), WorkflowSimTags.CLOUDLET_UPDATE);
         if (!processCloudletSubmitHasShown) {
             processCloudletSubmitHasShown = true;
@@ -369,4 +435,24 @@ public class WorkflowScheduler extends DatacenterBroker {
             sendNow(datacenterId, CloudSimTags.RESOURCE_CHARACTERISTICS, getId());
         }
     }
+    
+    private JobScheduledResult jobScheduledResultList = new JobScheduledResult();        
+    
+    public JobScheduledResult getJobScheduledResultList() {
+		return jobScheduledResultList;
+	}
+
+	public void setJobScheduledResultList(JobScheduledResult jobScheduledResultList) {
+		this.jobScheduledResultList = jobScheduledResultList;
+	}
+       
+    private List<TaskScheduledResult> taskScheduledResultList = new ArrayList<TaskScheduledResult>();        
+    
+    public List<TaskScheduledResult> getTaskScheduledResultList() {
+		return taskScheduledResultList;
+	}
+
+	public void setTaskScheduledResultList(List<TaskScheduledResult> taskScheduledResultList) {
+		this.taskScheduledResultList = taskScheduledResultList;
+	}
 }

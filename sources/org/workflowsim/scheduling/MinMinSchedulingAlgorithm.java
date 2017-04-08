@@ -35,7 +35,8 @@ public class MinMinSchedulingAlgorithm extends BaseSchedulingAlgorithm {
     }
     private final List<Boolean> hasChecked = new ArrayList<>();
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void run() {
 
         int size = getCloudletList().size();

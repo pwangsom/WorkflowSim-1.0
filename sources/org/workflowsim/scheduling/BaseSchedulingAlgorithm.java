@@ -17,8 +17,11 @@ package org.workflowsim.scheduling;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.Vm;
+import org.cloudbus.cloudsim.util.DisplayUtil;
+import org.workflowsim.Job;
 
 /**
  * The base scheduler has implemented the basic features. Every other scheduling method
@@ -46,7 +49,8 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
     /**
      * Initialize a BaseSchedulingAlgorithm
      */
-    public BaseSchedulingAlgorithm() {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public BaseSchedulingAlgorithm() {
         this.scheduledList = new ArrayList();
     }
 
@@ -55,7 +59,8 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
      *
      * @param list
      */
-    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
     public void setCloudletList(List list) {
         this.cloudletList = list;
     }
@@ -65,7 +70,8 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
      *
      * @param list
      */
-    @Override
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	@Override
     public void setVmList(List list) {
         this.vmList = new ArrayList(list);
     }
@@ -75,7 +81,8 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
      *
      * @return the job list
      */
-    @Override
+    @SuppressWarnings("rawtypes")
+	@Override
     public List getCloudletList() {
         return this.cloudletList;
     }
@@ -85,7 +92,8 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
      *
      * @return the vm list
      */
-    @Override
+    @SuppressWarnings("rawtypes")
+	@Override
     public List getVmList() {
         return this.vmList;
     }
@@ -102,8 +110,13 @@ public abstract class BaseSchedulingAlgorithm implements SchedulingAlgorithmInte
      *
      * @return job list
      */
-    @Override
+    @SuppressWarnings("rawtypes")
+	@Override
     public List getScheduledList() {
         return this.scheduledList;
+    }
+    
+    public void displayJobProperties(Job job){
+    	DisplayUtil.displayJobProperties(job);
     }
 }

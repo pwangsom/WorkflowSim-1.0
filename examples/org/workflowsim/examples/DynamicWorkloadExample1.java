@@ -82,11 +82,16 @@ public class DynamicWorkloadExample1 extends WorkflowSimBasicExample1 {
              * the data center or the host doesn't have sufficient resources the
              * exact vmNum would be smaller than that. Take care.
              */
-            int vmNum = 20;//number of vms;
+            int vmNum = 8;//number of vms;
             /**
              * Should change this based on real physical path
              */
-            String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            // String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            
+            // C:\Users\Dell\git\WorkflowSim-1.0\config\dax
+            // D:\Users-Profiles\Peerasak
+            String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/config/dax/Montage_25.xml";
+            
             File daxFile = new File(daxPath);
             if (!daxFile.exists()) {
                 Log.printLine("Warning: Please replace daxPath with the physical path in your working environment!");

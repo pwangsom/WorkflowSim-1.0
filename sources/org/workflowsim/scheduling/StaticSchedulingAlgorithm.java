@@ -38,7 +38,8 @@ public class StaticSchedulingAlgorithm extends BaseSchedulingAlgorithm {
         super();
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void run() throws Exception {
 
         Map<Integer, CondorVM> mId2Vm = new HashMap<>();

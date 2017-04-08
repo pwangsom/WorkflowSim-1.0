@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.workflowsim.examples.scheduling;
+package org.workflowsim.examples.scheduling.mapreduce;
 
 import java.io.File;
 import java.util.Calendar;
@@ -25,19 +25,20 @@ import org.workflowsim.WorkflowDatacenter;
 import org.workflowsim.Job;
 import org.workflowsim.WorkflowEngine;
 import org.workflowsim.WorkflowPlanner;
+import org.workflowsim.examples.planning.DHEFTPlanningAlgorithmExample1;
 import org.workflowsim.utils.ClusteringParameters;
 import org.workflowsim.utils.OverheadParameters;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.ReplicaCatalog;
 
 /**
- * This FCFS Scheduling Algorithm
+ * This Data Aware Scheduling Algorithm
  *
  * @author Weiwei Chen
  * @since WorkflowSim Toolkit 1.1
  * @date Nov 9, 2013
  */
-public class FCFSSchedulingAlgorithmExample extends DataAwareSchedulingAlgorithmExample {
+public class DataAwareSchedulingAlgorithmExample extends DHEFTPlanningAlgorithmExample1 {
 
     ////////////////////////// STATIC METHODS ///////////////////////
     /**
@@ -48,6 +49,7 @@ public class FCFSSchedulingAlgorithmExample extends DataAwareSchedulingAlgorithm
 
         try {
             // First step: Initialize the WorkflowSim package. 
+
             /**
              * However, the exact number of vms may not necessarily be vmNum If
              * the data center or the host doesn't have sufficient resources the
@@ -57,7 +59,7 @@ public class FCFSSchedulingAlgorithmExample extends DataAwareSchedulingAlgorithm
             /**
              * Should change this based on real physical path
              */
-            String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/config/dax/mapreduce/mapreduce_16J_64MB.xml";
+            String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
 
             File daxFile = new File(daxPath);
             if (!daxFile.exists()) {
@@ -70,7 +72,7 @@ public class FCFSSchedulingAlgorithmExample extends DataAwareSchedulingAlgorithm
              * algorithm should be static such that the scheduler would not
              * override the result of the planner
              */
-            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.FCFS;
+            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DATA;
             Parameters.PlanningAlgorithm pln_method = Parameters.PlanningAlgorithm.INVALID;
             ReplicaCatalog.FileSystem file_system = ReplicaCatalog.FileSystem.LOCAL;
 

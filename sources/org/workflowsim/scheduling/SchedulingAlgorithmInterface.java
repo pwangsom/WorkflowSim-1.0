@@ -17,6 +17,8 @@ package org.workflowsim.scheduling;
 
 import java.util.List;
 
+import org.workflowsim.Job;
+
 /**
  * The Scheduler interface
  *
@@ -30,25 +32,29 @@ public interface SchedulingAlgorithmInterface {
      * Sets the job list.
      * @param list
      */
-    public void setCloudletList(List list);
+    @SuppressWarnings("rawtypes")
+	public void setCloudletList(List list);
 
     /**
      * Sets the vm list.
      * @param list
      */
-    public void setVmList(List list);
+    @SuppressWarnings("rawtypes")
+	public void setVmList(List list);
 
     /**
      * Gets the job list.
      * @return 
      */
-    public List getCloudletList();
+    @SuppressWarnings("rawtypes")
+	public List getCloudletList();
 
     /**
      * Gets the vm list.
      * @return 
      */
-    public List getVmList();
+    @SuppressWarnings("rawtypes")
+	public List getVmList();
 
     /**
      * the main function.
@@ -60,5 +66,8 @@ public interface SchedulingAlgorithmInterface {
      * Gets the scheduled jobs.
      * @return 
      */
-    public List getScheduledList();
+    @SuppressWarnings("rawtypes")
+	public List getScheduledList();
+    
+    public void displayJobProperties(Job job);
 }

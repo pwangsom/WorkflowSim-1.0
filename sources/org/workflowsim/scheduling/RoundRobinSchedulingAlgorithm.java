@@ -34,7 +34,8 @@ public class RoundRobinSchedulingAlgorithm extends BaseSchedulingAlgorithm {
     /**
      * The main function
      */
-    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
     public void run() {
         int vmIndex = 0;
         

@@ -36,7 +36,7 @@ public class ReplicaCatalog {
      * File System
      */
     public enum FileSystem {
-        SHARED, LOCAL
+        SHARED, LOCAL, DFS
     }
     /**
      * Map from file name to a file object

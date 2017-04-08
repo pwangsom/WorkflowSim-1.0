@@ -13,12 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.workflowsim.scheduling;
+package org.workflowsim.scheduling.mapreduce;
 
 import java.util.Iterator;
 import org.cloudbus.cloudsim.Cloudlet;
+import org.cloudbus.cloudsim.Log;
 import org.workflowsim.CondorVM;
+import org.workflowsim.Job;
 import org.workflowsim.WorkflowSimTags;
+import org.workflowsim.scheduling.BaseSchedulingAlgorithm;
 
 /**
  * The FCFS algorithm. 
@@ -27,7 +30,7 @@ import org.workflowsim.WorkflowSimTags;
  * @since WorkflowSim Toolkit 1.0
  * @date Apr 9, 2013
  */
-public class FCFSSchedulingAlgorithm extends BaseSchedulingAlgorithm {
+public class FCFSMapReduceAlgorithm extends BaseSchedulingAlgorithm {
 
     /**
      * The main function
@@ -35,8 +38,7 @@ public class FCFSSchedulingAlgorithm extends BaseSchedulingAlgorithm {
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
     public void run() {
-
-
+    	
         for (Iterator it = getCloudletList().iterator(); it.hasNext();) {
             Cloudlet cloudlet = (Cloudlet) it.next();
             boolean stillHasVm = false;
@@ -48,6 +50,8 @@ public class FCFSSchedulingAlgorithm extends BaseSchedulingAlgorithm {
                     vm.setState(WorkflowSimTags.VM_STATUS_BUSY);
                     cloudlet.setVmId(vm.getId());
                     getScheduledList().add(cloudlet);
+
+                    //displayJobProperties((Job) cloudlet);
                     break;
                 }
             }
@@ -56,5 +60,6 @@ public class FCFSSchedulingAlgorithm extends BaseSchedulingAlgorithm {
                 break;
             }
         }
+        
     }
 }

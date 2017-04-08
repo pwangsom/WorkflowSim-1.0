@@ -97,7 +97,11 @@ public class WorkflowSimBasicExample1 {
             /**
              * Should change this based on real physical path
              */
-            String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            // String daxPath = "/Users/weiweich/NetBeansProjects/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            
+            // C:\Users\Dell\git\WorkflowSim-1.0\config\dax
+            String daxPath = "/Users/Dell/git/WorkflowSim-1.0/config/dax/Montage_100.xml";
+            
             File daxFile = new File(daxPath);
             if (!daxFile.exists()) {
                 Log.printLine("Warning: Please replace daxPath with the physical path in your working environment!");
@@ -183,7 +187,8 @@ public class WorkflowSimBasicExample1 {
 
         // 2. A Machine contains one or more PEs or CPUs/Cores. Therefore, should
         //    create a list to store these PEs before creating
-        //    a Machine.
+        //    a Machine.    
+        
         for (int i = 1; i <= 20; i++) {
             List<Pe> peList1 = new ArrayList<>();
             int mips = 2000;

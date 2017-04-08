@@ -30,6 +30,7 @@ import org.cloudbus.cloudsim.VmAllocationPolicy;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
+import org.cloudbus.cloudsim.util.DisplayUtil;
 import org.workflowsim.utils.ReplicaCatalog;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.Parameters.ClassType;
@@ -172,11 +173,18 @@ public class WorkflowDatacenter extends Datacenter {
         double start_time = job.getExecStartTime();
         for (Task task : job.getTaskList()) {
             task.setExecStartTime(start_time);
-            double task_runtime = task.getCloudletLength() / vm.getMips();
-            start_time += task_runtime;
+            double task_runtime = (task.getCloudletLength() + task.getLocalityPenaltyLength()) / vm.getMips();
+            double finish_time = start_time + task_runtime;
             //Because CloudSim would not let us update end time here
-            task.setTaskFinishTime(start_time);
+            task.setTaskFinishTime(finish_time);
+            
+/*            Log.printLine(getName() + "Task Id: " + task.getCloudletId()
+            						+ " Time: " + task_runtime
+            						+ "\t\tStart: " + start_time
+            						+ "\t\tFinish: " + finish_time);*/
         }
+        // Log.print(getName() + "\t");
+        // DisplayUtil.displayJobProperties(job);
     }
 
     /**

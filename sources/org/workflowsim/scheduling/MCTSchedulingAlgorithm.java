@@ -33,7 +33,8 @@ public class MCTSchedulingAlgorithm extends BaseSchedulingAlgorithm {
         super();
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void run() {
 
 

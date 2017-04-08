@@ -36,7 +36,8 @@ public class Parameters {
     public enum SchedulingAlgorithm {
 
         MAXMIN, MINMIN, MCT, DATA, 
-        STATIC, FCFS, ROUNDROBIN, INVALID
+        STATIC, FCFS, ROUNDROBIN, INVALID,
+        FCFS_MR, DATA_MR, DELAY_MR
     }
     
     /**

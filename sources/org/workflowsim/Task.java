@@ -17,9 +17,11 @@ package org.workflowsim;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.Consts;
 import org.cloudbus.cloudsim.UtilizationModelFull;
+import org.workflowsim.utils.LocalityType;
 
 /**
  * Task is an extention to Cloudlet in CloudSim. It supports the implementation
@@ -100,6 +102,11 @@ public class Task extends Cloudlet {
         this.fileList = new ArrayList<>();
         this.impact = 0.0;
         this.taskFinishTime = -1.0;
+        
+
+    	dataStoredVmId[0] = -1;
+    	dataStoredVmId[1] = -1;
+    	dataStoredVmId[2] = -1;
     }
 
     /**
@@ -321,4 +328,63 @@ public class Task extends Cloudlet {
         cost += costPerBw * fileSize;
         return cost;
     }
+    
+    private final int REPLICAS = 3;    
+    private int[] dataStoredVmId = new int[REPLICAS];
+    
+	public int getDataStoredVmIdByIndex(int index) {
+		return dataStoredVmId[index];
+	}
+
+	public void setDataStoredVmId(int[] dataStoredVmId) {
+		this.dataStoredVmId = dataStoredVmId;
+	}
+	
+	public int[] getDataStoredVmId() {
+		return dataStoredVmId;
+	}
+	
+	public void setDataStoredVmIdByIndex(int index, int dataStoredVmId) {
+		this.dataStoredVmId[index] = dataStoredVmId;
+	}
+	
+	private long localityPenaltyLength = 0;
+
+	public long getLocalityPenaltyLength() {
+		return localityPenaltyLength;
+	}
+
+	public void setLocalityPenaltyLength(long localityPenaltyLength) {
+		this.localityPenaltyLength = localityPenaltyLength;
+	}
+	
+	private LocalityType localityType = LocalityType.UNDEFINED;
+
+	public LocalityType getLocalityType() {
+		return localityType; 
+	}
+
+	public void setLocalityType(LocalityType localityType) {
+		this.localityType = localityType;
+	}
+	
+/*	@Override
+	public double getActualCPUTime() {
+		return getTaskFinishTime() - getExecStartTime();
+	}*/
+	
+	private int delayScheduleCount = 0;
+
+	public int getDelayScheduleCount() {
+		return delayScheduleCount;
+	}
+
+	public void setDelayScheduleCount(int delayScheduleCount) {
+		this.delayScheduleCount = delayScheduleCount;
+	}
+	
+	public void incrementDelayScheduleCount(){
+		this.delayScheduleCount++;
+	}
+	
 }

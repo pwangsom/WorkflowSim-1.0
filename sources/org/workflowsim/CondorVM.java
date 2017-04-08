@@ -15,8 +15,12 @@
  */
 package org.workflowsim;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.cloudbus.cloudsim.CloudletScheduler;
 import org.cloudbus.cloudsim.Vm;
+import org.cloudbus.cloudsim.util.JavaUtil;
 
 /**
  * Condor Vm extends a VM: the difference is it has a locl storage system and it
@@ -195,4 +199,38 @@ public class CondorVM extends Vm {
     public final int getState() {
         return this.state;
     }
+    
+    private List<CondorVM> hostVms;
+    private List<CondorVM> rackVms;
+    private List<CondorVM> remoteRackVms;
+
+	public List<CondorVM> getHostVms() {
+		if(JavaUtil.isNull(this.hostVms))
+			hostVms = new ArrayList<CondorVM>();
+		return hostVms;
+	}
+
+	public void setHostVms(List<CondorVM> hostVms) {
+		this.hostVms = hostVms;
+	}
+
+	public List<CondorVM> getRackVms() {
+		if(JavaUtil.isNull(this.rackVms))
+			rackVms = new ArrayList<CondorVM>();
+		return rackVms;
+	}
+
+	public void setRackVms(List<CondorVM> rackVms) {
+		this.rackVms = rackVms;
+	}
+
+	public List<CondorVM> getRemoteRackVms() {
+		if(JavaUtil.isNull(this.remoteRackVms))
+			remoteRackVms = new ArrayList<CondorVM>();
+		return remoteRackVms;
+	}
+
+	public void setRemoteRackVms(List<CondorVM> remoteRackVms) {
+		this.remoteRackVms = remoteRackVms;
+	}
 }
