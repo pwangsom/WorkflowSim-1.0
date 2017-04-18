@@ -1,16 +1,11 @@
 package org.workflowsim.utils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.cloudbus.cloudsim.Vm;
 
 public class VmRelationship {
     
-    private static Map<Integer, List<Integer>> mapOfVMRelationship;
+/*    
+	private static Map<Integer, List<Integer>> mapOfVMRelationship;
     
     static{
     	mapOfVMRelationship = new HashMap<Integer, List<Integer>>();
@@ -33,13 +28,60 @@ public class VmRelationship {
     	mapOfVMRelationship.put(5, listOfVm5);
     	mapOfVMRelationship.put(6, listOfVm6);
     	mapOfVMRelationship.put(7, listOfVm7);    	
-    }
+}*/
     
     public static LocalityType getRelationshipType(Vm basedVm, Vm findRelationshipVm){    	
     	return getRelationshipType(basedVm.getId(), findRelationshipVm.getId());
     }
     
-    public static LocalityType getRelationshipType(int basedVmId, int findRelationshipVmId){
+    public static LocalityType getRelationshipType(int basedVmId, int findRelationshipVmId){    	
+    	if(isTheSameNode(basedVmId, findRelationshipVmId)){
+    		return LocalityType.VM_LOCALITY;
+    	} else if(isTheSameHost(basedVmId, findRelationshipVmId)){
+    		return LocalityType.HOST_LOCALITY;
+    	} else if(isTheSameRack(basedVmId, findRelationshipVmId)){
+    		return LocalityType.RACK_LOCALITY;
+    	} else {
+    		return LocalityType.REMOTE_LOCALITY;
+    	}
+    }
+    
+    private static final int VMS = 16;
+    
+    private static boolean isTheSameNode(int first, int second){
+    	if(first == second){
+    		return true;
+    	} else {
+    		return false;
+    	}
+    }
+    
+    private static boolean isTheSameHost(int first, int second){
+    	first = first%VMS;
+    	second = second%VMS;
+    	
+    	if(first == second){
+    		return true;
+    	} else {
+    		return false;
+    	}
+    }
+    
+    private static boolean isTheSameRack(int first, int second){
+		first = first%VMS;
+		second = second%VMS;
+		
+		first = first>>1;
+		second = second>>1;
+		
+		if(first == second){
+			return true;
+		} else {	
+			return false;
+		}
+    }
+    
+/*    public static LocalityType getRelationshipType(int basedVmId, int findRelationshipVmId){
     	LocalityType type = null;
     	
     	Integer mappingType = mapOfVMRelationship.get(basedVmId).get(findRelationshipVmId);
@@ -60,7 +102,7 @@ public class VmRelationship {
     	}
     	
     	return type;
-    }
+    }*/
     
     public static LocalityType getRelationshipType(int basedVmId, int[] findRelationshipVmId){
 		int relation = 3;

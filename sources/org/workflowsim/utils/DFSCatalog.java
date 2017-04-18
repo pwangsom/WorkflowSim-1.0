@@ -1,7 +1,6 @@
 package org.workflowsim.utils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.cloudbus.cloudsim.Cloudlet;
@@ -17,7 +16,8 @@ import org.workflowsim.Task;
  */
 
 public class DFSCatalog {
-	
+
+/*
 	private static final int VMS = 8;
 	
 	private static final List<Integer> RACK_0 = new ArrayList<Integer>(Arrays.asList(0, 1, 4, 5));
@@ -67,6 +67,48 @@ public class DFSCatalog {
 							remoteCopyOfRack1Index++;
 						}
 						break;
+					}
+				}
+			}
+			
+			return true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			return false;
+		}
+	}
+*/
+	
+	private static final int VMS = 16;
+	
+	public static boolean initialDFSCatalog(List<? extends Cloudlet> cloudletList){
+		
+		int copy1 = 4;
+		int copy2 = 10;
+		int copy3 = 14;
+		
+		try {
+			List<Job> mapTaskList = getMapTaskList(cloudletList);
+
+			int size = mapTaskList.size();
+			
+			for(int i = 0; i < size; i++){
+				
+				int index1 = ((i%VMS)+copy1)%VMS;				
+				Job job = mapTaskList.get(i);				
+				
+				for(Task task : job.getTaskList()){
+					if(task.getDepth() == 1){
+						
+						int index2 = (index1+copy2)%VMS;
+						int index3 = (index1+copy3)%VMS;
+						
+						task.setDataStoredVmIdByIndex(0, index1);
+						task.setDataStoredVmIdByIndex(1, index2);
+						task.setDataStoredVmIdByIndex(2, index3);
+						
 					}
 				}
 			}

@@ -10,6 +10,7 @@ import org.workflowsim.FileItem;
 import org.workflowsim.Job;
 import org.workflowsim.Task;
 import org.workflowsim.utils.JobScheduledResult;
+import org.workflowsim.utils.MapReduceParameter;
 import org.workflowsim.utils.Parameters.ClassType;
 import org.workflowsim.utils.TaskScheduledResult;
 import org.workflowsim.utils.VmRelationship;
@@ -144,7 +145,7 @@ public class DisplayUtil {
 	
     public static void displayJobScheduledResultListShort(JobScheduledResult jobScheduledResultList) {        
         DecimalFormat dft = new DecimalFormat("###.##");
-        Log.printLine("Number of MapReduce Task:\t" + jobScheduledResultList.getNumOfMapTask());
+        Log.printLine("Number of MapReduce Task:\t" + jobScheduledResultList.getNumOfTask());
         Log.printLine("VM Locality Ratio:\t\t" + jobScheduledResultList.getNumOfVmLocal() + "\t\t" + dft.format(jobScheduledResultList.getVmLocalRatio()));
         Log.printLine("Host Locality Ratio:\t\t" + jobScheduledResultList.getNumOfHostLocal() + "\t\t" +  dft.format(jobScheduledResultList.getHostLocalRatio()));
         Log.printLine("Rack Locality Ratio:\t\t" + jobScheduledResultList.getNumOfRackLocal() + "\t\t" + dft.format(jobScheduledResultList.getRackLocalRatio()));
@@ -175,9 +176,9 @@ public class DisplayUtil {
                 	+ "Task Type" + indent
                 	+ "Data Locality" + indent + indent
                 	// + "VM ID" + indent
-/*                	+ "First Copy" + indent
+                	+ "First Copy" + indent
                 	+ "Second Copy" + indent
-                	+ "Third Copy" + indent*/
+                	+ "Third Copy" + indent
                 	+ "Delay Count"
                 	);
         
@@ -249,15 +250,15 @@ public class DisplayUtil {
 	                    + taskType + indent 
 	                    + resultItem.getLocalityType() + indent + indent
 	            		//+ vmId + indent
-/*	                    + firstCopy + indent + indent
+	                    + firstCopy + indent + indent
 	                    + secondCopy + indent + indent
-	                    + thirdCopy + indent*/
+	                    + thirdCopy + indent + indent
 	                    + delayCount
 	                    );
         }
         
         Log.printLine();
-        Log.printLine("Number of MapReduce Task:\t" + jobScheduledResultList.getNumOfMapTask());
+        Log.printLine("Number of MapReduce Task:\t" + jobScheduledResultList.getNumOfTask());
         Log.printLine("VM Locality Ratio:\t\t" + jobScheduledResultList.getNumOfVmLocal() + "\t\t" + dft.format(jobScheduledResultList.getVmLocalRatio()));
         Log.printLine("Host Locality Ratio:\t\t" + jobScheduledResultList.getNumOfHostLocal() + "\t\t" +  dft.format(jobScheduledResultList.getHostLocalRatio()));
         Log.printLine("Rack Locality Ratio:\t\t" + jobScheduledResultList.getNumOfRackLocal() + "\t\t" + dft.format(jobScheduledResultList.getRackLocalRatio()));
@@ -418,7 +419,7 @@ public class DisplayUtil {
             	taskId = task.getCloudletId();
             }
             
-            if(job.getVmId() >-1 && job.getVmId() < 8) {
+            if(job.getVmId() >-1 && job.getVmId() < MapReduceParameter.NO_VMS) {
             	locality = VmRelationship.getRelationshipType(job.getVmId(), task.getDataStoredVmId()).toString();
             }
             

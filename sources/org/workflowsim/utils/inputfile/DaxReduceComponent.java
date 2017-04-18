@@ -12,7 +12,7 @@ public class DaxReduceComponent {
 	
 	private String jobId = "ID";
 	private String nameSpace = "MapReduce";
-	private String name = "map_task";
+	private String name = "reduce_task";
 	private String version = "1.0";
 	private String runtime = "100.00";
 

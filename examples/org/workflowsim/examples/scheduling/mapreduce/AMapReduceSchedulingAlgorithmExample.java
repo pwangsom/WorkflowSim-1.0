@@ -42,6 +42,7 @@ import org.workflowsim.WorkflowEngine;
 import org.workflowsim.WorkflowPlanner;
 import org.workflowsim.utils.ClusteringParameters;
 import org.workflowsim.utils.JobScheduledResult;
+import org.workflowsim.utils.MapReduceParameter;
 import org.workflowsim.utils.OverheadParameters;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.ReplicaCatalog;
@@ -68,8 +69,8 @@ public class AMapReduceSchedulingAlgorithmExample {
     // protected static String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/config/dax/mapreduce/mapreduce_16J_64MB.xml";
     // protected static String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/config/dax/mapreduce/mapreduce_random_16map_2reduce_64chunk_1024data.xml";
 
-    protected static int hostNum = 4;
-    protected static int vmNum = 8;
+    // protected static int hostNum = 8;
+    // protected static int vmNum = 16;
 
     protected static List<CondorVM> createVM(int userId, int vms) {
 
@@ -116,10 +117,10 @@ public class AMapReduceSchedulingAlgorithmExample {
              * Should change this based on real physical path
              */
         	
-        	String daxPathDell = "C://Users/Dell/git/WorkflowSim-1.0/config/mapreduce/";
-        	String daxPathLenovo = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/config/mapreduce/";
+        	//String daxPathDell = "C://Users/Dell/git/WorkflowSim-1.0/config/mapreduce/";
+        	String daxPathLenovo = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
         	
-        	String fileName = "mr_5000m_8r_v1.xml";
+        	String fileName = "mr_160m_16r_v1.xml";
         	
         	String daxPath = daxPathLenovo + fileName;
         	
@@ -136,7 +137,7 @@ public class AMapReduceSchedulingAlgorithmExample {
              * algorithm should be static such that the scheduler would not
              * override the result of the planner
              */
-            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DATA_MR;
+            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DELAY_MR;
             Parameters.PlanningAlgorithm pln_method = Parameters.PlanningAlgorithm.INVALID;
             ReplicaCatalog.FileSystem file_system = ReplicaCatalog.FileSystem.LOCAL;
 
@@ -154,7 +155,7 @@ public class AMapReduceSchedulingAlgorithmExample {
             /**
              * Initialize static parameters
              */
-            Parameters.init(vmNum, daxPath, null,
+            Parameters.init(MapReduceParameter.NO_VMS, daxPath, null,
                     null, op, cp, sch_method, pln_method,
                     null, 0);
             ReplicaCatalog.init(file_system);
@@ -214,8 +215,8 @@ public class AMapReduceSchedulingAlgorithmExample {
             Log.printLine("File Name: " + fileName);
             Log.printLine();        
            
-            // DisplayUtil.displayJobScheduledResultList(createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0));
-            DisplayUtil.displayJobScheduledResultListShort(createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0));
+            DisplayUtil.displayJobScheduledResultList(createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0));
+            // DisplayUtil.displayJobScheduledResultListShort(createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0));
 
             Log.printLine();        
             Log.printLine("======================================= Simulation Report =======================================");
@@ -232,7 +233,7 @@ public class AMapReduceSchedulingAlgorithmExample {
     	for(Integer i : scheduledJobList){
     		for(Job job : outputJobList){
     			if(job.getCloudletId() == i){
-    				// DisplayUtil.displayJobProperties(job);
+    				DisplayUtil.displayJobProperties(job);
     				listManager.add(new JobScheduledResult(job));
     				outputJobList.remove(job);
     				break;
@@ -259,7 +260,7 @@ public class AMapReduceSchedulingAlgorithmExample {
         long storage = 1000000; //host storage
         int bw = 10000;
         
-        for(int i = 0; i < hostNum; i++){
+        for(int i = 0; i < MapReduceParameter.NO_HOSTS; i++){
             List<Pe> peList0 = new ArrayList<>();
             
             // 3. Create PEs and add these into the list.

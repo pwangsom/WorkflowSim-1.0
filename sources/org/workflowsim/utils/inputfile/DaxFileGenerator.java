@@ -16,13 +16,13 @@ public class DaxFileGenerator {
 	// TODO Auto-generated method stub
 	
 	private final static int numOfMapTask = 160;
-	private final static int numOfReduceTask = 8;
+	private final static int numOfReduceTask = 16;
 	
 	private final static double minMapRuntime = 150.00;
-	private final static double maxMapRuntime = 250.00;		
+	private final static double maxMapRuntime = 199.99;		
 
 	private final static double minReduceRuntime = 50.00;
-	private final static double maxReduceRuntime = 99.99;
+	private final static double maxReduceRuntime = 79.99;
 	
 	private final static String xmlVersion = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 	private final static String xsdInfo = "<adag xmlns=\"http://pegasus.isi.edu/schema/DAX\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
@@ -40,17 +40,41 @@ public class DaxFileGenerator {
 			int version = 3;
 			
 			for(int i = 1; i <= version; i++){
-				String pathFile = String.format("./config/mapreduce/mr_%sm_%sr_v%s.xml", map, red, String.valueOf(i));	
+				String pathFile = String.format("./mapreduce/input/mr_%sm_%sr_v%s.xml", map, red, String.valueOf(i));	
 				genDaxFile(pathFile);	
 				Log.printLine(pathFile);
 			}
-			
-			
+									
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
+/*	
+	private static boolean isTheSameRack(int first, int second){
+
+		Log.printLine(String.format("Start first = %d, second = %d", first, second));
+		
+		first = first%8;
+		second = second%8;
+		
+		Log.printLine(String.format("Mod first = %d, second = %d", first, second));
+		
+		first = first>>1;
+		second = second>>1;
+		
+		Log.printLine(String.format("Now first = %d, second = %d", first, second));
+		
+		if(first == second){
+			Log.printLine("first and second are at the same host.");	
+			return true;
+		} else {
+			Log.printLine("first and second are not at the same host.");		
+			return false;
+		}
+	}
+*/	
 	
 	private static void genDaxFile(String pathFile){
 		try {	

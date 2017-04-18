@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.cloudbus.cloudsim.Host;
+import org.cloudbus.cloudsim.util.DisplayUtil;
 import org.cloudbus.cloudsim.util.JavaUtil;
 import org.workflowsim.CondorVM;
 import org.workflowsim.Job;
@@ -21,7 +22,7 @@ public class JobScheduledResult {
 	private int successSchedule = 0;
 	private int remainSchedule = 0;
 	
-	private double numOfMapTask = 0;
+	private double numOfTask = 0;
 	private double numOfVmLocal = 0;
 	private double numOfHostLocal = 0;
 	private double numOfRackLocal = 0;
@@ -66,7 +67,7 @@ public class JobScheduledResult {
 	public void add(JobScheduledResult jobResult){
 		if(JavaUtil.isNull(this.jobScheduledResultList)) this.jobScheduledResultList = new ArrayList<JobScheduledResult>();
 		this.jobScheduledResultList.add(jobResult);
-		computLocalityRatio(jobResult);
+		computeLocalityRatio(jobResult);
 		recordMinMaxTime(jobResult);
 	}
 	
@@ -74,9 +75,12 @@ public class JobScheduledResult {
 		return this.jobScheduledResultList;
 	}
 	
-	private void computLocalityRatio(JobScheduledResult jobResult) {
+	private void computeLocalityRatio(JobScheduledResult jobResult) {
 		if (jobResult.getJob().getDepth() == 1 || jobResult.getJob().getDepth() == 2) {
-			numOfMapTask++;
+			
+			DisplayUtil.displayJobProperties(jobResult.getJob());
+			
+			numOfTask++;
 			switch (jobResult.getLocalityType()) {
 			case VM_LOCALITY:
 				numOfVmLocal++;
@@ -204,12 +208,12 @@ public class JobScheduledResult {
 		return maxFinishTime < minStartTime?0:maxFinishTime;
 	}
 
-	public double getNumOfMapTask() {
-		return numOfMapTask;
+	public double getNumOfTask() {
+		return numOfTask;
 	}
 
-	public void setNumOfMapTask(double numOfMapTask) {
-		this.numOfMapTask = numOfMapTask;
+	public void setNumOfTask(double numOfTask) {
+		this.numOfTask = numOfTask;
 	}
 
 	public double getNumOfVmLocal() {
@@ -245,19 +249,19 @@ public class JobScheduledResult {
 	}
 	
 	public double getVmLocalRatio(){
-		return (this.numOfVmLocal/this.numOfMapTask)*100;
+		return (this.numOfVmLocal/this.numOfTask)*100;
 	}
 	
 	public double getHostLocalRatio(){
-		return (this.numOfHostLocal/this.numOfMapTask)*100;
+		return (this.numOfHostLocal/this.numOfTask)*100;
 	}
 	
 	public double getRackLocalRatio(){
-		return (this.numOfRackLocal/this.numOfMapTask)*100;
+		return (this.numOfRackLocal/this.numOfTask)*100;
 	}
 	
 	public double getRemoteLocalRatio(){
-		return (this.numOfRemoteLocal/this.numOfMapTask)*100;
+		return (this.numOfRemoteLocal/this.numOfTask)*100;
 	}
 	
 	public double getTotalExecutetionTime(){
