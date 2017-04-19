@@ -81,7 +81,7 @@ public class DFSCatalog {
 	}
 */
 	
-	private static final int VMS = 16;
+	// private static final int VMS = 16;
 	
 	public static boolean initialDFSCatalog(List<? extends Cloudlet> cloudletList){
 		
@@ -96,14 +96,14 @@ public class DFSCatalog {
 			
 			for(int i = 0; i < size; i++){
 				
-				int index1 = ((i%VMS)+copy1)%VMS;				
+				int index1 = ((i%MapReduceParameter.NO_VMS)+copy1)%MapReduceParameter.NO_VMS;				
 				Job job = mapTaskList.get(i);				
 				
 				for(Task task : job.getTaskList()){
 					if(task.getDepth() == 1){
 						
-						int index2 = (index1+copy2)%VMS;
-						int index3 = (index1+copy3)%VMS;
+						int index2 = (index1+copy2)%MapReduceParameter.NO_VMS;
+						int index3 = (index1+copy3)%MapReduceParameter.NO_VMS;
 						
 						task.setDataStoredVmIdByIndex(0, index1);
 						task.setDataStoredVmIdByIndex(1, index2);

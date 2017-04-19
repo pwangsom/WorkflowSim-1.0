@@ -46,8 +46,6 @@ public class VmRelationship {
     	}
     }
     
-    private static final int VMS = 16;
-    
     private static boolean isTheSameNode(int first, int second){
     	if(first == second){
     		return true;
@@ -57,8 +55,8 @@ public class VmRelationship {
     }
     
     private static boolean isTheSameHost(int first, int second){
-    	first = first%VMS;
-    	second = second%VMS;
+    	first = first%MapReduceParameter.NO_VMS;
+    	second = second%MapReduceParameter.NO_VMS;
     	
     	if(first == second){
     		return true;
@@ -68,8 +66,8 @@ public class VmRelationship {
     }
     
     private static boolean isTheSameRack(int first, int second){
-		first = first%VMS;
-		second = second%VMS;
+		first = first%MapReduceParameter.NO_VMS;
+		second = second%MapReduceParameter.NO_VMS;
 		
 		first = first>>1;
 		second = second>>1;
@@ -108,7 +106,7 @@ public class VmRelationship {
 		int relation = 3;
 		
 		for (int i = 0; i < findRelationshipVmId.length; i++) {
-			if (findRelationshipVmId[i] > -1 && findRelationshipVmId[i] < 8) {
+			if (findRelationshipVmId[i] > -1 && findRelationshipVmId[i] < MapReduceParameter.NO_VMS) {
 				int distance = VmRelationship.getRelationshipType(basedVmId, findRelationshipVmId[i]).distance();
 				if (distance < relation) {
 					relation = distance;

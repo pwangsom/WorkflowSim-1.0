@@ -105,7 +105,7 @@ public class DisplayUtil {
     			taskId = String.valueOf(task.getCloudletId());            	
             }
 			
-			locality = VmRelationship.getRelationshipType(instance.getVmId(), task.getDataStoredVmId()).toString();
+			locality = instance.getLocalityType().toString();
 			
 			firstCopy = task.getDataStoredVmIdByIndex(0);
 			secondCopy = task.getDataStoredVmIdByIndex(1);

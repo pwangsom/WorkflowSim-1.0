@@ -260,8 +260,7 @@ public class WorkflowScheduler extends DatacenterBroker {
         // Log.printLine();
         // Log.printLine(getName() + ": processCloudletUpdate(SimEvent ev) by WorkflowSimTags.CLOUDLET_UPDATE)");
         
-        // int preSize = getCloudletList().size();
-        // Log.printLine(getName() + ": processCloudletUpdate(SimEvent ev) by WorkflowSimTags.CLOUDLET_UPDATE): " + preSize);
+        int preSize = getCloudletList().size();
 
         BaseSchedulingAlgorithm scheduler = getScheduler(Parameters.getSchedulingAlgorithm());
         scheduler.setCloudletList(getCloudletList());
@@ -274,7 +273,8 @@ public class WorkflowScheduler extends DatacenterBroker {
             e.printStackTrace();
         }        
 
-        List<Cloudlet> scheduledList = scheduler.getScheduledList();
+        @SuppressWarnings("unchecked")
+		List<Cloudlet> scheduledList = scheduler.getScheduledList();
         for (Cloudlet cloudlet : scheduledList) {
             int vmId = cloudlet.getVmId();
             double delay = 0.0;
@@ -303,12 +303,18 @@ public class WorkflowScheduler extends DatacenterBroker {
             updateLocalityAfterScheduled(job);
             
             scheduledJob.add(job.getCloudletId());
+
+        	Log.printLine("scheduledJobList size " + scheduledJob.size() + "; CloudletId " + job.getCloudletId() + " has been added");
             
             schedule(getVmsToDatacentersMap().get(vmId), delay, CloudSimTags.CLOUDLET_SUBMIT, cloudlet);
         }                
         getCloudletList().removeAll(scheduledList);
         getCloudletSubmittedList().addAll(scheduledList);
         cloudletsSubmitted += scheduledList.size();
+        
+
+        Log.printLine("processCloudletUpdate(SimEvent ev): Incoming Cloudlet List Size: " + preSize + "; Scheduled List Size: " + scheduledList.size()
+        			+ "; Remaining Cloudlet List Size: " + getCloudletList().size() + "; cloudletsSubmitted: " + cloudletsSubmitted);
     }
     
     private void updateLocalityAfterScheduled(Job job){
@@ -410,7 +416,7 @@ public class WorkflowScheduler extends DatacenterBroker {
      * @param ev a simEvent object
      */
     protected void processCloudletSubmit(SimEvent ev) {
-        List<Job> list = (List) ev.getData();
+        List<Job> list = (List<Job>) ev.getData();
         getCloudletList().addAll(list);
         
         sendNow(this.getId(), WorkflowSimTags.CLOUDLET_UPDATE);

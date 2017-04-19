@@ -137,7 +137,7 @@ public class AMapReduceSchedulingAlgorithmExample {
              * algorithm should be static such that the scheduler would not
              * override the result of the planner
              */
-            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DELAY_MR;
+            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DATA_MR;
             Parameters.PlanningAlgorithm pln_method = Parameters.PlanningAlgorithm.INVALID;
             ReplicaCatalog.FileSystem file_system = ReplicaCatalog.FileSystem.LOCAL;
 
@@ -230,10 +230,16 @@ public class AMapReduceSchedulingAlgorithmExample {
     private static JobScheduledResult createJobScheduledResultList(List<Integer> scheduledJobList, List<Job> outputJobList){
     	JobScheduledResult listManager = new JobScheduledResult();
     	
+    	Log.printLine("Final scheduledJobList size " + scheduledJobList.size());
+    	
+    	int count = 0;
+    	
     	for(Integer i : scheduledJobList){
     		for(Job job : outputJobList){
     			if(job.getCloudletId() == i){
-    				DisplayUtil.displayJobProperties(job);
+    				// DisplayUtil.displayJobProperties(job);
+    				count++;
+    				// Log.printLine("CloudletId " + job.getCloudletId() + "; Matching No. " + count);
     				listManager.add(new JobScheduledResult(job));
     				outputJobList.remove(job);
     				break;

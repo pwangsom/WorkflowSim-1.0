@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.cloudbus.cloudsim.Host;
-import org.cloudbus.cloudsim.util.DisplayUtil;
 import org.cloudbus.cloudsim.util.JavaUtil;
 import org.workflowsim.CondorVM;
 import org.workflowsim.Job;
@@ -77,10 +76,12 @@ public class JobScheduledResult {
 	
 	private void computeLocalityRatio(JobScheduledResult jobResult) {
 		if (jobResult.getJob().getDepth() == 1 || jobResult.getJob().getDepth() == 2) {
-			
-			DisplayUtil.displayJobProperties(jobResult.getJob());
-			
+						
 			numOfTask++;
+			// Log.printLine("CloudletId " + jobResult.getJob().getCloudletId() + "; No of Task " + numOfTask);
+
+			// DisplayUtil.displayJobProperties(jobResult.getJob());
+			
 			switch (jobResult.getLocalityType()) {
 			case VM_LOCALITY:
 				numOfVmLocal++;
@@ -118,7 +119,7 @@ public class JobScheduledResult {
 	}
 	
 	private void setLocalityType() {
-		int relation = 4;
+/*		int relation = 4;
 		int vmId = this.job.getVmId();
 
 		if(!JavaUtil.isNull(this.task) && this.job.getDepth() == 1){			
@@ -136,7 +137,9 @@ public class JobScheduledResult {
 			relation = 3;
 		}
 
-		this.localityType = LocalityType.fromDistance(relation);
+		this.localityType = LocalityType.fromDistance(relation);*/
+
+		this.localityType = this.job.getLocalityType();
 	}
 
 	public Job getJob() {
