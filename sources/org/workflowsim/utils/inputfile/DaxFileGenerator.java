@@ -49,32 +49,7 @@ public class DaxFileGenerator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-/*	
-	private static boolean isTheSameRack(int first, int second){
-
-		Log.printLine(String.format("Start first = %d, second = %d", first, second));
-		
-		first = first%8;
-		second = second%8;
-		
-		Log.printLine(String.format("Mod first = %d, second = %d", first, second));
-		
-		first = first>>1;
-		second = second>>1;
-		
-		Log.printLine(String.format("Now first = %d, second = %d", first, second));
-		
-		if(first == second){
-			Log.printLine("first and second are at the same host.");	
-			return true;
-		} else {
-			Log.printLine("first and second are not at the same host.");		
-			return false;
-		}
-	}
-*/	
+	}	
 	
 	private static void genDaxFile(String pathFile){
 		try {	

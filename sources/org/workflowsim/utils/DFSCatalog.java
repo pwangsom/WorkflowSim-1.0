@@ -85,9 +85,13 @@ public class DFSCatalog {
 	
 	public static boolean initialDFSCatalog(List<? extends Cloudlet> cloudletList){
 		
-		int copy1 = 4;
+/*		int copy1 = 4;
 		int copy2 = 10;
-		int copy3 = 14;
+		int copy3 = 14;*/
+		
+		int copy1 = 0;
+		int copy2 = 6;
+		int copy3 = 11;
 		
 		try {
 			List<Job> mapTaskList = getMapTaskList(cloudletList);

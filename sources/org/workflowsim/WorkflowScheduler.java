@@ -41,6 +41,7 @@ import org.workflowsim.scheduling.mapreduce.DataAwareMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DelayMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.FCFSMapReduceAlgorithm;
 import org.workflowsim.utils.JobScheduledResult;
+import org.workflowsim.utils.LocalityType;
 import org.workflowsim.utils.Parameters;
 import org.workflowsim.utils.Parameters.SchedulingAlgorithm;
 import org.workflowsim.utils.TaskScheduledResult;
@@ -260,7 +261,7 @@ public class WorkflowScheduler extends DatacenterBroker {
         // Log.printLine();
         // Log.printLine(getName() + ": processCloudletUpdate(SimEvent ev) by WorkflowSimTags.CLOUDLET_UPDATE)");
         
-        int preSize = getCloudletList().size();
+        // int preSize = getCloudletList().size();
 
         BaseSchedulingAlgorithm scheduler = getScheduler(Parameters.getSchedulingAlgorithm());
         scheduler.setCloudletList(getCloudletList());
@@ -304,7 +305,7 @@ public class WorkflowScheduler extends DatacenterBroker {
             
             scheduledJob.add(job.getCloudletId());
 
-        	Log.printLine("scheduledJobList size " + scheduledJob.size() + "; CloudletId " + job.getCloudletId() + " has been added");
+        	// Log.printLine("scheduledJobList size " + scheduledJob.size() + "; CloudletId " + job.getCloudletId() + " has been added");
             
             schedule(getVmsToDatacentersMap().get(vmId), delay, CloudSimTags.CLOUDLET_SUBMIT, cloudlet);
         }                
@@ -312,14 +313,21 @@ public class WorkflowScheduler extends DatacenterBroker {
         getCloudletSubmittedList().addAll(scheduledList);
         cloudletsSubmitted += scheduledList.size();
         
-
+/*
         Log.printLine("processCloudletUpdate(SimEvent ev): Incoming Cloudlet List Size: " + preSize + "; Scheduled List Size: " + scheduledList.size()
         			+ "; Remaining Cloudlet List Size: " + getCloudletList().size() + "; cloudletsSubmitted: " + cloudletsSubmitted);
+        */
     }
     
     private void updateLocalityAfterScheduled(Job job){
         for (Task task : job.getTaskList()) {
-        	task.setLocalityType(VmRelationship.getRelationshipType(job.getVmId(), task.getDataStoredVmId()));
+        	
+        	if(job.getDepth() == 2){
+            	task.setLocalityType(LocalityType.REMOTE_LOCALITY);          		
+        	} else {
+            	task.setLocalityType(VmRelationship.getRelationshipType(job.getVmId(), task.getDataStoredVmId()));        		
+        	}
+        	
         	task.setLocalityPenaltyLength(task.getLocalityType().penaltyLenght());
         	
         	job.setLocalityType(task.getLocalityType());

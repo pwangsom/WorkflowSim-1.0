@@ -1,5 +1,6 @@
 package org.workflowsim.utils;
 
+import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 
 public class VmRelationship {
@@ -47,34 +48,55 @@ public class VmRelationship {
     }
     
     private static boolean isTheSameNode(int first, int second){
+    	
+    	// Log.printLine("Start isTheSameNode: first: " + first + "; second: " + second);
+    	
     	if(first == second){
+        	// Log.printLine("Final isTheSameNode: true");
     		return true;
     	} else {
+        	// Log.printLine("Final isTheSameNode: false");
     		return false;
     	}
     }
     
     private static boolean isTheSameHost(int first, int second){
-    	first = first%MapReduceParameter.NO_VMS;
-    	second = second%MapReduceParameter.NO_VMS;
+
+    	// Log.printLine("Start isTheSameHost: first: " + first + "; second: " + second);
+    	
+    	first = first%MapReduceParameter.NO_HOSTS;
+    	second = second%MapReduceParameter.NO_HOSTS;    	
+
+    	// Log.printLine("Modular isTheSameHost: first: " + first + "; second: " + second);
     	
     	if(first == second){
+        	// Log.printLine("Final isTheSameHost: true");
     		return true;
     	} else {
+        	// Log.printLine("Final isTheSameHost: false");
     		return false;
     	}
     }
     
     private static boolean isTheSameRack(int first, int second){
-		first = first%MapReduceParameter.NO_VMS;
-		second = second%MapReduceParameter.NO_VMS;
+    	
+    	// Log.printLine("Start isTheSameRack: first: " + first + "; second: " + second);
+    	
+		first = first%MapReduceParameter.NO_HOSTS;
+		second = second%MapReduceParameter.NO_HOSTS;
+		
+    	// Log.printLine("Modular isTheSameRack: first: " + first + "; second: " + second);
 		
 		first = first>>1;
 		second = second>>1;
+
+    	// Log.printLine("Shift isTheSameRack: first: " + first + "; second: " + second);
 		
 		if(first == second){
+        	// Log.printLine("Final isTheSameRack: true");
 			return true;
 		} else {	
+        	// Log.printLine("Final isTheSameRack: false");
 			return false;
 		}
     }
@@ -108,13 +130,21 @@ public class VmRelationship {
 		for (int i = 0; i < findRelationshipVmId.length; i++) {
 			if (findRelationshipVmId[i] > -1 && findRelationshipVmId[i] < MapReduceParameter.NO_VMS) {
 				int distance = VmRelationship.getRelationshipType(basedVmId, findRelationshipVmId[i]).distance();
+				
 				if (distance < relation) {
 					relation = distance;
 				}
+				
+				// Log.printLine("i: " + i + "; indexFiles: " + findRelationshipVmId[i] + "; relation " + relation + "; distance: " + distance);
+				
 			} else {
 				relation = 4;
 			}
-		}
+			
+			// Log.printLine();
+		}		
+
+		// Log.printLine("Final relation: " + relation);
 		
 		return LocalityType.fromDistance(relation);
     }
