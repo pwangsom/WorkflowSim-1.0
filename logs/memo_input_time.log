@@ -1,0 +1,621 @@
+C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/mr_160m_16r_v2.xml
+Initialising...
+Starting CloudSim version 3.0
+Datacenter_0 is starting...
+Starting WorkflowSim 1.1.0
+planner_0 is starting...
+planner_0_Merger_ is starting...
+planner_0_Merger__Engine_0 is starting...
+planner_0_Merger__Engine_0_Scheduler_0 is starting...
+Entities started.
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Cloud Resource List received with 1 resource(s)
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #0 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #1 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #2 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #3 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #4 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #5 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #6 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #7 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #8 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #9 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #10 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #11 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #12 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #13 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #14 in Datacenter_0
+0.0: planner_0_Merger__Engine_0_Scheduler_0: Trying to Create VM #15 in Datacenter_0
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #0 has been created in Datacenter #2, Host #0
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #1 has been created in Datacenter #2, Host #1
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #2 has been created in Datacenter #2, Host #2
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #3 has been created in Datacenter #2, Host #3
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #4 has been created in Datacenter #2, Host #4
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #5 has been created in Datacenter #2, Host #5
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #6 has been created in Datacenter #2, Host #6
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #7 has been created in Datacenter #2, Host #7
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #8 has been created in Datacenter #2, Host #0
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #9 has been created in Datacenter #2, Host #1
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #10 has been created in Datacenter #2, Host #2
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #11 has been created in Datacenter #2, Host #3
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #12 has been created in Datacenter #2, Host #4
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #13 has been created in Datacenter #2, Host #5
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #14 has been created in Datacenter #2, Host #6
+0.1: planner_0_Merger__Engine_0_Scheduler_0: VM #15 has been created in Datacenter #2, Host #7
+Initial DFS Success!!!
+Job_ID: 0, Task_ID: 1, Depth: 1, VM_ID: 11, Length: 194880, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 0, Task_ID: 1, Depth: 1, VM_ID: 11, Length: 194880, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 1, Task_ID: 2, Depth: 1, VM_ID: 12, Length: 191740, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 1, Task_ID: 2, Depth: 1, VM_ID: 12, Length: 191740, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 2, Task_ID: 3, Depth: 1, VM_ID: 13, Length: 179530, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 2, Task_ID: 3, Depth: 1, VM_ID: 13, Length: 179530, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 3, Task_ID: 4, Depth: 1, VM_ID: 14, Length: 154130, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 3, Task_ID: 4, Depth: 1, VM_ID: 14, Length: 154130, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 4, Task_ID: 5, Depth: 1, VM_ID: 15, Length: 168710, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 4, Task_ID: 5, Depth: 1, VM_ID: 15, Length: 168710, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 5, Task_ID: 6, Depth: 1, VM_ID: 5, Length: 179440, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 5, Task_ID: 6, Depth: 1, VM_ID: 5, Length: 179440, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 6, Task_ID: 7, Depth: 1, VM_ID: 6, Length: 186370, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 6, Task_ID: 7, Depth: 1, VM_ID: 6, Length: 186370, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 7, Task_ID: 8, Depth: 1, VM_ID: 7, Length: 185420, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 7, Task_ID: 8, Depth: 1, VM_ID: 7, Length: 185420, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 8, Task_ID: 9, Depth: 1, VM_ID: 8, Length: 194050, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 8, Task_ID: 9, Depth: 1, VM_ID: 8, Length: 194050, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 9, Task_ID: 10, Depth: 1, VM_ID: 9, Length: 160640, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 9, Task_ID: 10, Depth: 1, VM_ID: 9, Length: 160640, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 10, Task_ID: 11, Depth: 1, VM_ID: 10, Length: 151780, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 10, Task_ID: 11, Depth: 1, VM_ID: 10, Length: 151780, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 11, Task_ID: 12, Depth: 1, VM_ID: 1, Length: 182290, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 11, Task_ID: 12, Depth: 1, VM_ID: 1, Length: 182290, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 12, Task_ID: 13, Depth: 1, VM_ID: 2, Length: 185060, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 12, Task_ID: 13, Depth: 1, VM_ID: 2, Length: 185060, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 13, Task_ID: 14, Depth: 1, VM_ID: 3, Length: 179080, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 13, Task_ID: 14, Depth: 1, VM_ID: 3, Length: 179080, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 14, Task_ID: 15, Depth: 1, VM_ID: 4, Length: 183310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 14, Task_ID: 15, Depth: 1, VM_ID: 4, Length: 183310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 16, Task_ID: 17, Depth: 1, VM_ID: 0, Length: 164790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 16, Task_ID: 17, Depth: 1, VM_ID: 0, Length: 164790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 15, Task_ID: 16, Depth: 1, VM_ID: 10, Length: 198680, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 15, Task_ID: 16, Depth: 1, VM_ID: 10, Length: 198680, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 17, Task_ID: 18, Depth: 1, VM_ID: 14, Length: 190360, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 17, Task_ID: 18, Depth: 1, VM_ID: 14, Length: 190360, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 18, Task_ID: 19, Depth: 1, VM_ID: 9, Length: 198390, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 18, Task_ID: 19, Depth: 1, VM_ID: 9, Length: 198390, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 19, Task_ID: 20, Depth: 1, VM_ID: 0, Length: 199800, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 19, Task_ID: 20, Depth: 1, VM_ID: 0, Length: 199800, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 20, Task_ID: 21, Depth: 1, VM_ID: 15, Length: 199480, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 20, Task_ID: 21, Depth: 1, VM_ID: 15, Length: 199480, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 21, Task_ID: 22, Depth: 1, VM_ID: 3, Length: 174630, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 21, Task_ID: 22, Depth: 1, VM_ID: 3, Length: 174630, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 22, Task_ID: 23, Depth: 1, VM_ID: 5, Length: 171900, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 22, Task_ID: 23, Depth: 1, VM_ID: 5, Length: 171900, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 23, Task_ID: 24, Depth: 1, VM_ID: 13, Length: 177260, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 23, Task_ID: 24, Depth: 1, VM_ID: 13, Length: 177260, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 24, Task_ID: 25, Depth: 1, VM_ID: 1, Length: 195630, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 24, Task_ID: 25, Depth: 1, VM_ID: 1, Length: 195630, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 25, Task_ID: 26, Depth: 1, VM_ID: 4, Length: 164000, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 25, Task_ID: 26, Depth: 1, VM_ID: 4, Length: 164000, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 26, Task_ID: 27, Depth: 1, VM_ID: 2, Length: 150320, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 26, Task_ID: 27, Depth: 1, VM_ID: 2, Length: 150320, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 27, Task_ID: 28, Depth: 1, VM_ID: 7, Length: 186300, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 27, Task_ID: 28, Depth: 1, VM_ID: 7, Length: 186300, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 28, Task_ID: 29, Depth: 1, VM_ID: 6, Length: 180520, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 28, Task_ID: 29, Depth: 1, VM_ID: 6, Length: 180520, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 29, Task_ID: 30, Depth: 1, VM_ID: 12, Length: 182540, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 29, Task_ID: 30, Depth: 1, VM_ID: 12, Length: 182540, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 30, Task_ID: 31, Depth: 1, VM_ID: 8, Length: 156040, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 30, Task_ID: 31, Depth: 1, VM_ID: 8, Length: 156040, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 31, Task_ID: 32, Depth: 1, VM_ID: 11, Length: 158820, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 31, Task_ID: 32, Depth: 1, VM_ID: 11, Length: 158820, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 33, Task_ID: 34, Depth: 1, VM_ID: 4, Length: 183000, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 33, Task_ID: 34, Depth: 1, VM_ID: 4, Length: 183000, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 32, Task_ID: 33, Depth: 1, VM_ID: 10, Length: 171040, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 32, Task_ID: 33, Depth: 1, VM_ID: 10, Length: 171040, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 34, Task_ID: 35, Depth: 1, VM_ID: 13, Length: 168290, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 34, Task_ID: 35, Depth: 1, VM_ID: 13, Length: 168290, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 35, Task_ID: 36, Depth: 1, VM_ID: 15, Length: 168900, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 35, Task_ID: 36, Depth: 1, VM_ID: 15, Length: 168900, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 36, Task_ID: 37, Depth: 1, VM_ID: 2, Length: 159150, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 36, Task_ID: 37, Depth: 1, VM_ID: 2, Length: 159150, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 37, Task_ID: 38, Depth: 1, VM_ID: 3, Length: 171540, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 37, Task_ID: 38, Depth: 1, VM_ID: 3, Length: 171540, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 38, Task_ID: 39, Depth: 1, VM_ID: 13, Length: 188380, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 38, Task_ID: 39, Depth: 1, VM_ID: 13, Length: 188380, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 39, Task_ID: 40, Depth: 1, VM_ID: 4, Length: 199160, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 39, Task_ID: 40, Depth: 1, VM_ID: 4, Length: 199160, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 40, Task_ID: 41, Depth: 1, VM_ID: 14, Length: 189790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 40, Task_ID: 41, Depth: 1, VM_ID: 14, Length: 189790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 41, Task_ID: 42, Depth: 1, VM_ID: 8, Length: 185570, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 41, Task_ID: 42, Depth: 1, VM_ID: 8, Length: 185570, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 42, Task_ID: 43, Depth: 1, VM_ID: 5, Length: 189070, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 42, Task_ID: 43, Depth: 1, VM_ID: 5, Length: 189070, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 43, Task_ID: 44, Depth: 1, VM_ID: 11, Length: 169340, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 43, Task_ID: 44, Depth: 1, VM_ID: 11, Length: 169340, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 45, Task_ID: 46, Depth: 1, VM_ID: 9, Length: 150130, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 45, Task_ID: 46, Depth: 1, VM_ID: 9, Length: 150130, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 46, Task_ID: 47, Depth: 1, VM_ID: 0, Length: 179490, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 46, Task_ID: 47, Depth: 1, VM_ID: 0, Length: 179490, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 44, Task_ID: 45, Depth: 1, VM_ID: 6, Length: 195910, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 44, Task_ID: 45, Depth: 1, VM_ID: 6, Length: 195910, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 47, Task_ID: 48, Depth: 1, VM_ID: 7, Length: 162610, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 47, Task_ID: 48, Depth: 1, VM_ID: 7, Length: 162610, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 49, Task_ID: 50, Depth: 1, VM_ID: 12, Length: 186410, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 49, Task_ID: 50, Depth: 1, VM_ID: 12, Length: 186410, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 48, Task_ID: 49, Depth: 1, VM_ID: 1, Length: 177560, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 48, Task_ID: 49, Depth: 1, VM_ID: 1, Length: 177560, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 50, Task_ID: 51, Depth: 1, VM_ID: 2, Length: 172040, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 50, Task_ID: 51, Depth: 1, VM_ID: 2, Length: 172040, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 51, Task_ID: 52, Depth: 1, VM_ID: 3, Length: 179400, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 51, Task_ID: 52, Depth: 1, VM_ID: 3, Length: 179400, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 52, Task_ID: 53, Depth: 1, VM_ID: 10, Length: 186500, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 52, Task_ID: 53, Depth: 1, VM_ID: 10, Length: 186500, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 53, Task_ID: 54, Depth: 1, VM_ID: 11, Length: 191670, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 53, Task_ID: 54, Depth: 1, VM_ID: 11, Length: 191670, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 54, Task_ID: 55, Depth: 1, VM_ID: 14, Length: 186720, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 54, Task_ID: 55, Depth: 1, VM_ID: 14, Length: 186720, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 55, Task_ID: 56, Depth: 1, VM_ID: 15, Length: 161900, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 55, Task_ID: 56, Depth: 1, VM_ID: 15, Length: 161900, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 57, Task_ID: 58, Depth: 1, VM_ID: 5, Length: 160110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 57, Task_ID: 58, Depth: 1, VM_ID: 5, Length: 160110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 58, Task_ID: 59, Depth: 1, VM_ID: 12, Length: 187110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 58, Task_ID: 59, Depth: 1, VM_ID: 12, Length: 187110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 56, Task_ID: 57, Depth: 1, VM_ID: 2, Length: 196380, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 56, Task_ID: 57, Depth: 1, VM_ID: 2, Length: 196380, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 59, Task_ID: 60, Depth: 1, VM_ID: 3, Length: 198860, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 59, Task_ID: 60, Depth: 1, VM_ID: 3, Length: 198860, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 60, Task_ID: 61, Depth: 1, VM_ID: 7, Length: 170620, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 60, Task_ID: 61, Depth: 1, VM_ID: 7, Length: 170620, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 61, Task_ID: 62, Depth: 1, VM_ID: 10, Length: 196100, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 61, Task_ID: 62, Depth: 1, VM_ID: 10, Length: 196100, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 62, Task_ID: 63, Depth: 1, VM_ID: 13, Length: 163530, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 62, Task_ID: 63, Depth: 1, VM_ID: 13, Length: 163530, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 63, Task_ID: 64, Depth: 1, VM_ID: 11, Length: 168420, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 63, Task_ID: 64, Depth: 1, VM_ID: 11, Length: 168420, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 64, Task_ID: 65, Depth: 1, VM_ID: 15, Length: 177470, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 64, Task_ID: 65, Depth: 1, VM_ID: 15, Length: 177470, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 65, Task_ID: 66, Depth: 1, VM_ID: 7, Length: 174750, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 65, Task_ID: 66, Depth: 1, VM_ID: 7, Length: 174750, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 66, Task_ID: 67, Depth: 1, VM_ID: 9, Length: 175550, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 66, Task_ID: 67, Depth: 1, VM_ID: 9, Length: 175550, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 67, Task_ID: 68, Depth: 1, VM_ID: 14, Length: 190550, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 67, Task_ID: 68, Depth: 1, VM_ID: 14, Length: 190550, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 68, Task_ID: 69, Depth: 1, VM_ID: 4, Length: 159330, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 68, Task_ID: 69, Depth: 1, VM_ID: 4, Length: 159330, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 69, Task_ID: 70, Depth: 1, VM_ID: 8, Length: 153870, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 69, Task_ID: 70, Depth: 1, VM_ID: 8, Length: 153870, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 70, Task_ID: 71, Depth: 1, VM_ID: 0, Length: 157010, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 70, Task_ID: 71, Depth: 1, VM_ID: 0, Length: 157010, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 72, Task_ID: 73, Depth: 1, VM_ID: 1, Length: 162120, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 72, Task_ID: 73, Depth: 1, VM_ID: 1, Length: 162120, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 71, Task_ID: 72, Depth: 1, VM_ID: 6, Length: 192640, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 71, Task_ID: 72, Depth: 1, VM_ID: 6, Length: 192640, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 74, Task_ID: 75, Depth: 1, VM_ID: 3, Length: 172920, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 74, Task_ID: 75, Depth: 1, VM_ID: 3, Length: 172920, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 73, Task_ID: 74, Depth: 1, VM_ID: 7, Length: 175690, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 73, Task_ID: 74, Depth: 1, VM_ID: 7, Length: 175690, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 76, Task_ID: 77, Depth: 1, VM_ID: 4, Length: 196100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 76, Task_ID: 77, Depth: 1, VM_ID: 4, Length: 196100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 77, Task_ID: 78, Depth: 1, VM_ID: 5, Length: 170100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 77, Task_ID: 78, Depth: 1, VM_ID: 5, Length: 170100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 75, Task_ID: 76, Depth: 1, VM_ID: 14, Length: 150640, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 75, Task_ID: 76, Depth: 1, VM_ID: 14, Length: 150640, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 78, Task_ID: 79, Depth: 1, VM_ID: 12, Length: 172690, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 78, Task_ID: 79, Depth: 1, VM_ID: 12, Length: 172690, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 79, Task_ID: 80, Depth: 1, VM_ID: 2, Length: 157100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 79, Task_ID: 80, Depth: 1, VM_ID: 2, Length: 157100, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 80, Task_ID: 81, Depth: 1, VM_ID: 8, Length: 180600, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 80, Task_ID: 81, Depth: 1, VM_ID: 8, Length: 180600, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 81, Task_ID: 82, Depth: 1, VM_ID: 13, Length: 151660, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 81, Task_ID: 82, Depth: 1, VM_ID: 13, Length: 151660, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 82, Task_ID: 83, Depth: 1, VM_ID: 11, Length: 165240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 82, Task_ID: 83, Depth: 1, VM_ID: 11, Length: 165240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 83, Task_ID: 84, Depth: 1, VM_ID: 10, Length: 192620, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 83, Task_ID: 84, Depth: 1, VM_ID: 10, Length: 192620, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 84, Task_ID: 85, Depth: 1, VM_ID: 7, Length: 152500, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 84, Task_ID: 85, Depth: 1, VM_ID: 7, Length: 152500, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 86, Task_ID: 87, Depth: 1, VM_ID: 14, Length: 178080, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 86, Task_ID: 87, Depth: 1, VM_ID: 14, Length: 178080, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 85, Task_ID: 86, Depth: 1, VM_ID: 5, Length: 154790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 85, Task_ID: 86, Depth: 1, VM_ID: 5, Length: 154790, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 87, Task_ID: 88, Depth: 1, VM_ID: 15, Length: 193750, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 87, Task_ID: 88, Depth: 1, VM_ID: 15, Length: 193750, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 88, Task_ID: 89, Depth: 1, VM_ID: 9, Length: 156910, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 88, Task_ID: 89, Depth: 1, VM_ID: 9, Length: 156910, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 89, Task_ID: 90, Depth: 1, VM_ID: 4, Length: 193350, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 89, Task_ID: 90, Depth: 1, VM_ID: 4, Length: 193350, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 90, Task_ID: 91, Depth: 1, VM_ID: 0, Length: 194060, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 90, Task_ID: 91, Depth: 1, VM_ID: 0, Length: 194060, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 91, Task_ID: 92, Depth: 1, VM_ID: 1, Length: 165650, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 91, Task_ID: 92, Depth: 1, VM_ID: 1, Length: 165650, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 92, Task_ID: 93, Depth: 1, VM_ID: 2, Length: 157230, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 92, Task_ID: 93, Depth: 1, VM_ID: 2, Length: 157230, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 93, Task_ID: 94, Depth: 1, VM_ID: 12, Length: 175790, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 93, Task_ID: 94, Depth: 1, VM_ID: 12, Length: 175790, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 94, Task_ID: 95, Depth: 1, VM_ID: 6, Length: 160620, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 94, Task_ID: 95, Depth: 1, VM_ID: 6, Length: 160620, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 96, Task_ID: 97, Depth: 1, VM_ID: 8, Length: 197760, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 96, Task_ID: 97, Depth: 1, VM_ID: 8, Length: 197760, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 95, Task_ID: 96, Depth: 1, VM_ID: 3, Length: 186550, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 95, Task_ID: 96, Depth: 1, VM_ID: 3, Length: 186550, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 97, Task_ID: 98, Depth: 1, VM_ID: 5, Length: 161970, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 97, Task_ID: 98, Depth: 1, VM_ID: 5, Length: 161970, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 98, Task_ID: 99, Depth: 1, VM_ID: 2, Length: 173280, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 98, Task_ID: 99, Depth: 1, VM_ID: 2, Length: 173280, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 100, Task_ID: 101, Depth: 1, VM_ID: 4, Length: 193090, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 100, Task_ID: 101, Depth: 1, VM_ID: 4, Length: 193090, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 99, Task_ID: 100, Depth: 1, VM_ID: 1, Length: 168180, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 99, Task_ID: 100, Depth: 1, VM_ID: 1, Length: 168180, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 101, Task_ID: 102, Depth: 1, VM_ID: 0, Length: 167650, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 101, Task_ID: 102, Depth: 1, VM_ID: 0, Length: 167650, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 102, Task_ID: 103, Depth: 1, VM_ID: 7, Length: 170060, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 102, Task_ID: 103, Depth: 1, VM_ID: 7, Length: 170060, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 103, Task_ID: 104, Depth: 1, VM_ID: 14, Length: 191670, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 103, Task_ID: 104, Depth: 1, VM_ID: 14, Length: 191670, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 104, Task_ID: 105, Depth: 1, VM_ID: 15, Length: 186730, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 104, Task_ID: 105, Depth: 1, VM_ID: 15, Length: 186730, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 105, Task_ID: 106, Depth: 1, VM_ID: 6, Length: 177240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 105, Task_ID: 106, Depth: 1, VM_ID: 6, Length: 177240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 106, Task_ID: 107, Depth: 1, VM_ID: 13, Length: 179360, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 106, Task_ID: 107, Depth: 1, VM_ID: 13, Length: 179360, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 107, Task_ID: 108, Depth: 1, VM_ID: 11, Length: 190990, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 107, Task_ID: 108, Depth: 1, VM_ID: 11, Length: 190990, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 108, Task_ID: 109, Depth: 1, VM_ID: 2, Length: 190610, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 108, Task_ID: 109, Depth: 1, VM_ID: 2, Length: 190610, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 109, Task_ID: 110, Depth: 1, VM_ID: 0, Length: 186890, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 109, Task_ID: 110, Depth: 1, VM_ID: 0, Length: 186890, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 110, Task_ID: 111, Depth: 1, VM_ID: 8, Length: 193310, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 110, Task_ID: 111, Depth: 1, VM_ID: 8, Length: 193310, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 111, Task_ID: 112, Depth: 1, VM_ID: 4, Length: 181950, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 111, Task_ID: 112, Depth: 1, VM_ID: 4, Length: 181950, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 112, Task_ID: 113, Depth: 1, VM_ID: 10, Length: 157850, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 112, Task_ID: 113, Depth: 1, VM_ID: 10, Length: 157850, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 113, Task_ID: 114, Depth: 1, VM_ID: 9, Length: 164810, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 113, Task_ID: 114, Depth: 1, VM_ID: 9, Length: 164810, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 114, Task_ID: 115, Depth: 1, VM_ID: 1, Length: 198880, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 114, Task_ID: 115, Depth: 1, VM_ID: 1, Length: 198880, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 116, Task_ID: 117, Depth: 1, VM_ID: 12, Length: 199850, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 116, Task_ID: 117, Depth: 1, VM_ID: 12, Length: 199850, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 115, Task_ID: 116, Depth: 1, VM_ID: 11, Length: 167380, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 115, Task_ID: 116, Depth: 1, VM_ID: 11, Length: 167380, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 117, Task_ID: 118, Depth: 1, VM_ID: 2, Length: 161950, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 117, Task_ID: 118, Depth: 1, VM_ID: 2, Length: 161950, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 119, Task_ID: 120, Depth: 1, VM_ID: 3, Length: 184740, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 119, Task_ID: 120, Depth: 1, VM_ID: 3, Length: 184740, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 118, Task_ID: 119, Depth: 1, VM_ID: 5, Length: 179530, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 118, Task_ID: 119, Depth: 1, VM_ID: 5, Length: 179530, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 121, Task_ID: 122, Depth: 1, VM_ID: 13, Length: 198020, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 121, Task_ID: 122, Depth: 1, VM_ID: 13, Length: 198020, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 120, Task_ID: 121, Depth: 1, VM_ID: 0, Length: 199680, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 120, Task_ID: 121, Depth: 1, VM_ID: 0, Length: 199680, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 123, Task_ID: 124, Depth: 1, VM_ID: 7, Length: 156360, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 123, Task_ID: 124, Depth: 1, VM_ID: 7, Length: 156360, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 122, Task_ID: 123, Depth: 1, VM_ID: 9, Length: 196310, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 122, Task_ID: 123, Depth: 1, VM_ID: 9, Length: 196310, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 124, Task_ID: 125, Depth: 1, VM_ID: 14, Length: 175020, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 124, Task_ID: 125, Depth: 1, VM_ID: 14, Length: 175020, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 126, Task_ID: 127, Depth: 1, VM_ID: 15, Length: 187250, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 126, Task_ID: 127, Depth: 1, VM_ID: 15, Length: 187250, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 127, Task_ID: 128, Depth: 1, VM_ID: 6, Length: 168160, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 127, Task_ID: 128, Depth: 1, VM_ID: 6, Length: 168160, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 125, Task_ID: 126, Depth: 1, VM_ID: 12, Length: 185110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 125, Task_ID: 126, Depth: 1, VM_ID: 12, Length: 185110, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 128, Task_ID: 129, Depth: 1, VM_ID: 11, Length: 155310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 128, Task_ID: 129, Depth: 1, VM_ID: 11, Length: 155310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 129, Task_ID: 130, Depth: 1, VM_ID: 4, Length: 181860, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 129, Task_ID: 130, Depth: 1, VM_ID: 4, Length: 181860, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 130, Task_ID: 131, Depth: 1, VM_ID: 10, Length: 191120, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 130, Task_ID: 131, Depth: 1, VM_ID: 10, Length: 191120, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 131, Task_ID: 132, Depth: 1, VM_ID: 8, Length: 164390, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 131, Task_ID: 132, Depth: 1, VM_ID: 8, Length: 164390, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 133, Task_ID: 134, Depth: 1, VM_ID: 0, Length: 196310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 133, Task_ID: 134, Depth: 1, VM_ID: 0, Length: 196310, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 134, Task_ID: 135, Depth: 1, VM_ID: 1, Length: 171450, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 134, Task_ID: 135, Depth: 1, VM_ID: 1, Length: 171450, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 132, Task_ID: 133, Depth: 1, VM_ID: 11, Length: 164830, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 132, Task_ID: 133, Depth: 1, VM_ID: 11, Length: 164830, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 135, Task_ID: 136, Depth: 1, VM_ID: 2, Length: 163720, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 135, Task_ID: 136, Depth: 1, VM_ID: 2, Length: 163720, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 136, Task_ID: 137, Depth: 1, VM_ID: 3, Length: 193160, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 136, Task_ID: 137, Depth: 1, VM_ID: 3, Length: 193160, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 137, Task_ID: 138, Depth: 1, VM_ID: 5, Length: 196810, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 137, Task_ID: 138, Depth: 1, VM_ID: 5, Length: 196810, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 138, Task_ID: 139, Depth: 1, VM_ID: 13, Length: 175980, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 138, Task_ID: 139, Depth: 1, VM_ID: 13, Length: 175980, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 139, Task_ID: 140, Depth: 1, VM_ID: 1, Length: 177630, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 139, Task_ID: 140, Depth: 1, VM_ID: 1, Length: 177630, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 140, Task_ID: 141, Depth: 1, VM_ID: 7, Length: 194940, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 140, Task_ID: 141, Depth: 1, VM_ID: 7, Length: 194940, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 141, Task_ID: 142, Depth: 1, VM_ID: 4, Length: 189620, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 141, Task_ID: 142, Depth: 1, VM_ID: 4, Length: 189620, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 142, Task_ID: 143, Depth: 1, VM_ID: 0, Length: 188300, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 142, Task_ID: 143, Depth: 1, VM_ID: 0, Length: 188300, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 143, Task_ID: 144, Depth: 1, VM_ID: 10, Length: 154380, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 143, Task_ID: 144, Depth: 1, VM_ID: 10, Length: 154380, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 144, Task_ID: 145, Depth: 1, VM_ID: 2, Length: 154770, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 144, Task_ID: 145, Depth: 1, VM_ID: 2, Length: 154770, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 0, 2nd: 6, 3rd: 11, Delay: 0
+Job_ID: 145, Task_ID: 146, Depth: 1, VM_ID: 9, Length: 187040, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 145, Task_ID: 146, Depth: 1, VM_ID: 9, Length: 187040, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 1, 2nd: 7, 3rd: 12, Delay: 0
+Job_ID: 147, Task_ID: 148, Depth: 1, VM_ID: 14, Length: 158280, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 147, Task_ID: 148, Depth: 1, VM_ID: 14, Length: 158280, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 3, 2nd: 9, 3rd: 14, Delay: 0
+Job_ID: 146, Task_ID: 147, Depth: 1, VM_ID: 3, Length: 179870, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 146, Task_ID: 147, Depth: 1, VM_ID: 3, Length: 179870, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 2, 2nd: 8, 3rd: 13, Delay: 0
+Job_ID: 148, Task_ID: 149, Depth: 1, VM_ID: 15, Length: 168570, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 148, Task_ID: 149, Depth: 1, VM_ID: 15, Length: 168570, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 4, 2nd: 10, 3rd: 15, Delay: 0
+Job_ID: 150, Task_ID: 151, Depth: 1, VM_ID: 6, Length: 198980, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 150, Task_ID: 151, Depth: 1, VM_ID: 6, Length: 198980, Penalty: 0, Time: -1, Start: 0, Finish: -1, Locality: VM_LOCALITY, 1st: 6, 2nd: 12, 3rd: 1, Delay: 0
+Job_ID: 149, Task_ID: 150, Depth: 1, VM_ID: 12, Length: 199960, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 149, Task_ID: 150, Depth: 1, VM_ID: 12, Length: 199960, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 5, 2nd: 11, 3rd: 0, Delay: 0
+Job_ID: 152, Task_ID: 153, Depth: 1, VM_ID: 1, Length: 156150, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 152, Task_ID: 153, Depth: 1, VM_ID: 1, Length: 156150, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 8, 2nd: 14, 3rd: 3, Delay: 0
+Job_ID: 151, Task_ID: 152, Depth: 1, VM_ID: 10, Length: 160210, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 151, Task_ID: 152, Depth: 1, VM_ID: 10, Length: 160210, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 7, 2nd: 13, 3rd: 2, Delay: 0
+Job_ID: 153, Task_ID: 154, Depth: 1, VM_ID: 8, Length: 176240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 153, Task_ID: 154, Depth: 1, VM_ID: 8, Length: 176240, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 9, 2nd: 15, 3rd: 4, Delay: 0
+Job_ID: 155, Task_ID: 156, Depth: 1, VM_ID: 7, Length: 189640, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 155, Task_ID: 156, Depth: 1, VM_ID: 7, Length: 189640, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 11, 2nd: 1, 3rd: 6, Delay: 0
+Job_ID: 156, Task_ID: 157, Depth: 1, VM_ID: 14, Length: 160140, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 156, Task_ID: 157, Depth: 1, VM_ID: 14, Length: 160140, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 12, 2nd: 2, 3rd: 7, Delay: 0
+Job_ID: 154, Task_ID: 155, Depth: 1, VM_ID: 13, Length: 188010, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 154, Task_ID: 155, Depth: 1, VM_ID: 13, Length: 188010, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 10, 2nd: 0, 3rd: 5, Delay: 0
+Job_ID: 158, Task_ID: 159, Depth: 1, VM_ID: 15, Length: 174850, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 158, Task_ID: 159, Depth: 1, VM_ID: 15, Length: 174850, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 14, 2nd: 4, 3rd: 9, Delay: 0
+Job_ID: 157, Task_ID: 158, Depth: 1, VM_ID: 11, Length: 186710, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 157, Task_ID: 158, Depth: 1, VM_ID: 11, Length: 186710, Penalty: 100000, Time: -1, Start: 0, Finish: -1, Locality: HOST_LOCALITY, 1st: 13, 2nd: 3, 3rd: 8, Delay: 0
+Job_ID: 159, Task_ID: 160, Depth: 1, VM_ID: 6, Length: 167650, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 159, Task_ID: 160, Depth: 1, VM_ID: 6, Length: 167650, Penalty: 300000, Time: -1, Start: 0, Finish: -1, Locality: RACK_LOCALITY, 1st: 15, 2nd: 5, 3rd: 10, Delay: 0
+Job_ID: 160, Task_ID: 161, Depth: 2, VM_ID: 15, Length: 64620, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 160, Task_ID: 161, Depth: 2, VM_ID: 15, Length: 64620, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 161, Task_ID: 162, Depth: 2, VM_ID: 14, Length: 74590, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 161, Task_ID: 162, Depth: 2, VM_ID: 14, Length: 74590, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 162, Task_ID: 163, Depth: 2, VM_ID: 13, Length: 72670, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 162, Task_ID: 163, Depth: 2, VM_ID: 13, Length: 72670, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 163, Task_ID: 164, Depth: 2, VM_ID: 12, Length: 56220, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 163, Task_ID: 164, Depth: 2, VM_ID: 12, Length: 56220, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 164, Task_ID: 165, Depth: 2, VM_ID: 11, Length: 67360, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 164, Task_ID: 165, Depth: 2, VM_ID: 11, Length: 67360, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 165, Task_ID: 166, Depth: 2, VM_ID: 10, Length: 79630, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 165, Task_ID: 166, Depth: 2, VM_ID: 10, Length: 79630, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 166, Task_ID: 167, Depth: 2, VM_ID: 9, Length: 76740, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 166, Task_ID: 167, Depth: 2, VM_ID: 9, Length: 76740, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 167, Task_ID: 168, Depth: 2, VM_ID: 8, Length: 69770, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 167, Task_ID: 168, Depth: 2, VM_ID: 8, Length: 69770, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 168, Task_ID: 169, Depth: 2, VM_ID: 7, Length: 60560, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 168, Task_ID: 169, Depth: 2, VM_ID: 7, Length: 60560, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 169, Task_ID: 170, Depth: 2, VM_ID: 6, Length: 65080, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 169, Task_ID: 170, Depth: 2, VM_ID: 6, Length: 65080, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 170, Task_ID: 171, Depth: 2, VM_ID: 5, Length: 65740, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 170, Task_ID: 171, Depth: 2, VM_ID: 5, Length: 65740, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 171, Task_ID: 172, Depth: 2, VM_ID: 4, Length: 71470, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 171, Task_ID: 172, Depth: 2, VM_ID: 4, Length: 71470, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 172, Task_ID: 173, Depth: 2, VM_ID: 3, Length: 58790, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 172, Task_ID: 173, Depth: 2, VM_ID: 3, Length: 58790, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 173, Task_ID: 174, Depth: 2, VM_ID: 2, Length: 60190, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 173, Task_ID: 174, Depth: 2, VM_ID: 2, Length: 60190, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 174, Task_ID: 175, Depth: 2, VM_ID: 1, Length: 69130, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 174, Task_ID: 175, Depth: 2, VM_ID: 1, Length: 69130, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 175, Task_ID: 176, Depth: 2, VM_ID: 0, Length: 62570, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+Job_ID: 175, Task_ID: 176, Depth: 2, VM_ID: 0, Length: 62570, Penalty: 500000, Time: -1, Start: 0, Finish: -1, Locality: UNDEFINED, 1st: -1, 2nd: -1, 3rd: -1, Delay: 0
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #0
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #1
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #2
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #3
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #4
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #5
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #6
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #7
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #8
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #9
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #10
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #11
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #12
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #13
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #14
+4108.029999999999: planner_0_Merger__Engine_0_Scheduler_0: Destroying VM #15
+planner_0_Merger__Engine_0_Scheduler_0 is shutting down...
+Simulation: No more future events
+CloudInformationService: Notify all CloudSim entities for shutting down.
+Datacenter_0 is shutting down...
+planner_0 is shutting down...
+planner_0_Merger_ is shutting down...
+planner_0_Merger__Engine_0 is shutting down...
+planner_0_Merger__Engine_0_Scheduler_0 is shutting down...
+Simulation completed.
+Simulation completed.
+
+======================================= Simulation Report =======================================
+
+Algorithm Name: DATA_MR
+File Name: mr_160m_16r_v2.xml
+
+Final scheduledJobList size 177
+
+========== SCHEDULING ALGORITHM OUTPUT ==========
+Job ID	User Task ID	STATUS		VM ID	Time		Start Time	Finish Time	Task Type	Data Locality		First Copy	Second Copy	Third Copy	Delay Count
+176	0		Success		15	0.21		0.1		0.31		Stage-in	UNDEFINED		-1		-1		-1		0
+0	1		Success		11	194.88		0.31		195.19		Map Task	VM_LOCALITY		0		6		11		0
+1	2		Success		12	191.74		0.31		192.05		Map Task	VM_LOCALITY		1		7		12		0
+2	3		Success		13	179.53		0.31		179.84		Map Task	VM_LOCALITY		2		8		13		0
+3	4		Success		14	154.13		0.31		154.44		Map Task	VM_LOCALITY		3		9		14		0
+4	5		Success		15	168.71		0.31		169.02		Map Task	VM_LOCALITY		4		10		15		0
+5	6		Success		5	179.44		0.31		179.75		Map Task	VM_LOCALITY		5		11		0		0
+6	7		Success		6	186.37		0.31		186.68		Map Task	VM_LOCALITY		6		12		1		0
+7	8		Success		7	185.42		0.31		185.73		Map Task	VM_LOCALITY		7		13		2		0
+8	9		Success		8	194.05		0.31		194.36		Map Task	VM_LOCALITY		8		14		3		0
+9	10		Success		9	160.64		0.31		160.95		Map Task	VM_LOCALITY		9		15		4		0
+10	11		Success		10	151.78		0.31		152.09		Map Task	VM_LOCALITY		10		0		5		0
+11	12		Success		1	182.29		0.31		182.6		Map Task	VM_LOCALITY		11		1		6		0
+12	13		Success		2	185.06		0.31		185.37		Map Task	VM_LOCALITY		12		2		7		0
+13	14		Success		3	179.08		0.31		179.39		Map Task	VM_LOCALITY		13		3		8		0
+14	15		Success		4	183.31		0.31		183.62		Map Task	VM_LOCALITY		14		4		9		0
+16	17		Success		0	164.79		0.31		165.1		Map Task	VM_LOCALITY		0		6		11		0
+15	16		Success		10	198.68		152.4		351.08		Map Task	VM_LOCALITY		15		5		10		0
+17	18		Success		14	490.36		154.44		644.8		Map Task	RACK_LOCALITY		1		7		12		0
+18	19		Success		9	498.39		160.95		659.34		Map Task	RACK_LOCALITY		2		8		13		0
+19	20		Success		0	499.8		165.1		664.9		Map Task	RACK_LOCALITY		3		9		14		0
+20	21		Success		15	199.48		169.02		368.5		Map Task	VM_LOCALITY		4		10		15		0
+21	22		Success		3	274.63		179.39		454.02		Map Task	HOST_LOCALITY		5		11		0		0
+22	23		Success		5	471.9		179.75		651.65		Map Task	RACK_LOCALITY		6		12		1		0
+23	24		Success		13	177.26		179.86		357.12		Map Task	VM_LOCALITY		7		13		2		0
+24	25		Success		1	495.63		182.6		678.23		Map Task	RACK_LOCALITY		8		14		3		0
+25	26		Success		4	164		183.62		347.62		Map Task	VM_LOCALITY		9		15		4		0
+26	27		Success		2	250.32		185.37		435.69		Map Task	HOST_LOCALITY		10		0		5		0
+27	28		Success		7	486.3		185.73		672.03		Map Task	RACK_LOCALITY		11		1		6		0
+28	29		Success		6	480.52		186.68		667.2		Map Task	RACK_LOCALITY		12		2		7		0
+29	30		Success		12	482.54		192.05		674.59		Map Task	RACK_LOCALITY		13		3		8		0
+30	31		Success		8	456.04		194.36		650.4		Map Task	RACK_LOCALITY		14		4		9		0
+31	32		Success		11	458.82		195.19		654.01		Map Task	RACK_LOCALITY		15		5		10		0
+33	34		Success		4	283		347.62		630.62		Map Task	HOST_LOCALITY		1		7		12		0
+32	33		Success		10	471.04		351.08		822.12		Map Task	RACK_LOCALITY		0		6		11		0
+34	35		Success		13	168.29		357.12		525.41		Map Task	VM_LOCALITY		2		8		13		0
+35	36		Success		15	468.9		368.5		837.4		Map Task	RACK_LOCALITY		3		9		14		0
+36	37		Success		2	259.15		435.69		694.84		Map Task	HOST_LOCALITY		4		10		15		0
+37	38		Success		3	271.54		454.02		725.56		Map Task	HOST_LOCALITY		5		11		0		0
+38	39		Success		13	488.38		525.41		1013.79		Map Task	RACK_LOCALITY		6		12		1		0
+39	40		Success		4	499.16		630.62		1129.78		Map Task	RACK_LOCALITY		7		13		2		0
+40	41		Success		14	189.79		644.8		834.59		Map Task	VM_LOCALITY		8		14		3		0
+41	42		Success		8	485.57		650.4		1135.97		Map Task	RACK_LOCALITY		9		15		4		0
+42	43		Success		5	189.07		651.65		840.72		Map Task	VM_LOCALITY		10		0		5		0
+43	44		Success		11	169.34		654.01		823.35		Map Task	VM_LOCALITY		11		1		6		0
+45	46		Success		9	450.13		659.34		1109.47		Map Task	RACK_LOCALITY		13		3		8		0
+46	47		Success		0	479.49		664.9		1144.39		Map Task	RACK_LOCALITY		14		4		9		0
+44	45		Success		6	495.91		667.2		1163.11		Map Task	RACK_LOCALITY		12		2		7		0
+47	48		Success		7	262.61		672.03		934.64		Map Task	HOST_LOCALITY		15		5		10		0
+49	50		Success		12	186.41		674.59		861		Map Task	VM_LOCALITY		1		7		12		0
+48	49		Success		1	477.56		678.23		1155.79		Map Task	RACK_LOCALITY		0		6		11		0
+50	51		Success		2	172.04		694.84		866.88		Map Task	VM_LOCALITY		2		8		13		0
+51	52		Success		3	179.4		725.56		904.96		Map Task	VM_LOCALITY		3		9		14		0
+52	53		Success		10	186.5		822.12		1008.62		Map Task	VM_LOCALITY		4		10		15		0
+53	54		Success		11	191.67		823.35		1015.02		Map Task	VM_LOCALITY		5		11		0		0
+54	55		Success		14	286.72		834.59		1121.31		Map Task	HOST_LOCALITY		6		12		1		0
+55	56		Success		15	261.9		837.4		1099.3		Map Task	HOST_LOCALITY		7		13		2		0
+57	58		Success		5	460.11		840.72		1300.83		Map Task	RACK_LOCALITY		9		15		4		0
+58	59		Success		12	487.11		861		1348.11		Map Task	RACK_LOCALITY		10		0		5		0
+56	57		Success		2	496.38		866.88		1363.26		Map Task	RACK_LOCALITY		8		14		3		0
+59	60		Success		3	298.86		904.96		1203.82		Map Task	HOST_LOCALITY		11		1		6		0
+60	61		Success		7	170.62		934.64		1105.26		Map Task	VM_LOCALITY		12		2		7		0
+61	62		Success		10	496.1		1008.62		1504.72		Map Task	RACK_LOCALITY		13		3		8		0
+62	63		Success		13	463.53		1013.79		1477.32		Map Task	RACK_LOCALITY		14		4		9		0
+63	64		Success		11	468.42		1015.02		1483.44		Map Task	RACK_LOCALITY		15		5		10		0
+64	65		Success		15	477.47		1099.3		1576.77		Map Task	RACK_LOCALITY		0		6		11		0
+65	66		Success		7	174.75		1105.26		1280.01		Map Task	VM_LOCALITY		1		7		12		0
+66	67		Success		9	475.55		1109.47		1585.02		Map Task	RACK_LOCALITY		2		8		13		0
+67	68		Success		14	190.55		1121.31		1311.86		Map Task	VM_LOCALITY		3		9		14		0
+68	69		Success		4	159.33		1129.78		1289.11		Map Task	VM_LOCALITY		4		10		15		0
+69	70		Success		8	253.87		1135.97		1389.84		Map Task	HOST_LOCALITY		5		11		0		0
+70	71		Success		0	457.01		1144.39		1601.4		Map Task	RACK_LOCALITY		6		12		1		0
+72	73		Success		1	462.12		1155.79		1617.91		Map Task	RACK_LOCALITY		8		14		3		0
+71	72		Success		6	492.64		1163.11		1655.75		Map Task	RACK_LOCALITY		7		13		2		0
+74	75		Success		3	472.92		1203.82		1676.74		Map Task	RACK_LOCALITY		10		0		5		0
+73	74		Success		7	275.69		1280.01		1555.7		Map Task	HOST_LOCALITY		9		15		4		0
+76	77		Success		4	296.1		1289.11		1585.21		Map Task	HOST_LOCALITY		12		2		7		0
+77	78		Success		5	270.1		1300.83		1570.93		Map Task	HOST_LOCALITY		13		3		8		0
+75	76		Success		14	250.64		1311.86		1562.5		Map Task	HOST_LOCALITY		11		1		6		0
+78	79		Success		12	272.69		1348.11		1620.8		Map Task	HOST_LOCALITY		14		4		9		0
+79	80		Success		2	257.1		1363.26		1620.36		Map Task	HOST_LOCALITY		15		5		10		0
+80	81		Success		8	280.6		1389.84		1670.44		Map Task	HOST_LOCALITY		0		6		11		0
+81	82		Success		13	451.66		1477.32		1928.98		Map Task	RACK_LOCALITY		1		7		12		0
+82	83		Success		11	465.24		1483.44		1948.68		Map Task	RACK_LOCALITY		2		8		13		0
+83	84		Success		10	492.62		1504.72		1997.34		Map Task	RACK_LOCALITY		3		9		14		0
+84	85		Success		7	252.5		1555.7		1808.2		Map Task	HOST_LOCALITY		4		10		15		0
+86	87		Success		14	278.08		1562.5		1840.58		Map Task	HOST_LOCALITY		6		12		1		0
+85	86		Success		5	154.79		1570.93		1725.72		Map Task	VM_LOCALITY		5		11		0		0
+87	88		Success		15	293.75		1576.77		1870.52		Map Task	HOST_LOCALITY		7		13		2		0
+88	89		Success		9	456.91		1585.02		2041.93		Map Task	RACK_LOCALITY		8		14		3		0
+89	90		Success		4	193.35		1585.21		1778.56		Map Task	VM_LOCALITY		9		15		4		0
+90	91		Success		0	194.06		1601.4		1795.46		Map Task	VM_LOCALITY		10		0		5		0
+91	92		Success		1	165.65		1617.91		1783.56		Map Task	VM_LOCALITY		11		1		6		0
+92	93		Success		2	157.23		1620.36		1777.59		Map Task	VM_LOCALITY		12		2		7		0
+93	94		Success		12	475.79		1620.8		2096.59		Map Task	RACK_LOCALITY		13		3		8		0
+94	95		Success		6	260.62		1655.75		1916.37		Map Task	HOST_LOCALITY		14		4		9		0
+96	97		Success		8	297.76		1670.44		1968.2		Map Task	HOST_LOCALITY		0		6		11		0
+95	96		Success		3	486.55		1676.74		2163.29		Map Task	RACK_LOCALITY		15		5		10		0
+97	98		Success		5	461.97		1725.72		2187.69		Map Task	RACK_LOCALITY		1		7		12		0
+98	99		Success		2	173.28		1777.59		1950.87		Map Task	VM_LOCALITY		2		8		13		0
+100	101		Success		4	193.09		1778.56		1971.65		Map Task	VM_LOCALITY		4		10		15		0
+99	100		Success		1	268.18		1783.56		2051.74		Map Task	HOST_LOCALITY		3		9		14		0
+101	102		Success		0	167.65		1795.46		1963.11		Map Task	VM_LOCALITY		5		11		0		0
+102	103		Success		7	470.06		1808.2		2278.26		Map Task	RACK_LOCALITY		6		12		1		0
+103	104		Success		14	491.67		1840.58		2332.25		Map Task	RACK_LOCALITY		7		13		2		0
+104	105		Success		15	486.73		1870.52		2357.25		Map Task	RACK_LOCALITY		8		14		3		0
+105	106		Success		6	477.24		1916.37		2393.61		Map Task	RACK_LOCALITY		9		15		4		0
+106	107		Success		13	279.36		1928.98		2208.34		Map Task	HOST_LOCALITY		10		0		5		0
+107	108		Success		11	190.99		1948.68		2139.67		Map Task	VM_LOCALITY		11		1		6		0
+108	109		Success		2	190.61		1950.87		2141.48		Map Task	VM_LOCALITY		12		2		7		0
+109	110		Success		0	286.89		1963.11		2250		Map Task	HOST_LOCALITY		13		3		8		0
+110	111		Success		8	493.31		1968.2		2461.51		Map Task	RACK_LOCALITY		14		4		9		0
+111	112		Success		4	481.95		1971.65		2453.6		Map Task	RACK_LOCALITY		15		5		10		0
+112	113		Success		10	457.85		1997.34		2455.19		Map Task	RACK_LOCALITY		0		6		11		0
+113	114		Success		9	264.81		2041.93		2306.74		Map Task	HOST_LOCALITY		1		7		12		0
+114	115		Success		1	498.88		2051.74		2550.62		Map Task	RACK_LOCALITY		2		8		13		0
+116	117		Success		12	299.85		2096.59		2396.44		Map Task	HOST_LOCALITY		4		10		15		0
+115	116		Success		11	267.38		2139.67		2407.05		Map Task	HOST_LOCALITY		3		9		14		0
+117	118		Success		2	461.95		2141.48		2603.43		Map Task	RACK_LOCALITY		5		11		0		0
+119	120		Success		3	484.74		2163.29		2648.03		Map Task	RACK_LOCALITY		7		13		2		0
+118	119		Success		5	479.53		2187.69		2667.22		Map Task	RACK_LOCALITY		6		12		1		0
+121	122		Success		13	498.02		2208.34		2706.36		Map Task	RACK_LOCALITY		9		15		4		0
+120	121		Success		0	299.68		2250		2549.68		Map Task	HOST_LOCALITY		8		14		3		0
+123	124		Success		7	456.36		2278.26		2734.62		Map Task	RACK_LOCALITY		11		1		6		0
+122	123		Success		9	496.31		2306.74		2803.05		Map Task	RACK_LOCALITY		10		0		5		0
+124	125		Success		14	475.02		2332.25		2807.27		Map Task	RACK_LOCALITY		12		2		7		0
+126	127		Success		15	487.25		2357.25		2844.5		Map Task	RACK_LOCALITY		14		4		9		0
+127	128		Success		6	468.16		2393.61		2861.77		Map Task	RACK_LOCALITY		15		5		10		0
+125	126		Success		12	485.11		2396.44		2881.55		Map Task	RACK_LOCALITY		13		3		8		0
+128	129		Success		11	155.31		2407.05		2562.36		Map Task	VM_LOCALITY		0		6		11		0
+129	130		Success		4	281.86		2453.6		2735.46		Map Task	HOST_LOCALITY		1		7		12		0
+130	131		Success		10	291.12		2455.19		2746.31		Map Task	HOST_LOCALITY		2		8		13		0
+131	132		Success		8	464.39		2461.51		2925.9		Map Task	RACK_LOCALITY		3		9		14		0
+133	134		Success		0	196.31		2549.68		2745.99		Map Task	VM_LOCALITY		5		11		0		0
+134	135		Success		1	171.45		2550.62		2722.07		Map Task	VM_LOCALITY		6		12		1		0
+132	133		Success		11	464.83		2562.36		3027.19		Map Task	RACK_LOCALITY		4		10		15		0
+135	136		Success		2	163.72		2603.43		2767.15		Map Task	VM_LOCALITY		7		13		2		0
+136	137		Success		3	193.16		2648.03		2841.19		Map Task	VM_LOCALITY		8		14		3		0
+137	138		Success		5	496.81		2667.22		3164.03		Map Task	RACK_LOCALITY		9		15		4		0
+138	139		Success		13	275.98		2706.36		2982.34		Map Task	HOST_LOCALITY		10		0		5		0
+139	140		Success		1	177.63		2722.07		2899.7		Map Task	VM_LOCALITY		11		1		6		0
+140	141		Success		7	194.94		2734.62		2929.56		Map Task	VM_LOCALITY		12		2		7		0
+141	142		Success		4	489.62		2735.46		3225.08		Map Task	RACK_LOCALITY		13		3		8		0
+142	143		Success		0	488.3		2745.99		3234.29		Map Task	RACK_LOCALITY		14		4		9		0
+143	144		Success		10	154.38		2746.31		2900.69		Map Task	VM_LOCALITY		15		5		10		0
+144	145		Success		2	454.77		2767.15		3221.92		Map Task	RACK_LOCALITY		0		6		11		0
+145	146		Success		9	287.04		2803.05		3090.09		Map Task	HOST_LOCALITY		1		7		12		0
+147	148		Success		14	158.28		2807.27		2965.55		Map Task	VM_LOCALITY		3		9		14		0
+146	147		Success		3	479.87		2841.19		3321.06		Map Task	RACK_LOCALITY		2		8		13		0
+148	149		Success		15	168.57		2844.5		3013.07		Map Task	VM_LOCALITY		4		10		15		0
+150	151		Success		6	198.98		2861.77		3060.75		Map Task	VM_LOCALITY		6		12		1		0
+149	150		Success		12	499.96		2881.55		3381.51		Map Task	RACK_LOCALITY		5		11		0		0
+152	153		Success		1	456.15		2899.7		3355.85		Map Task	RACK_LOCALITY		8		14		3		0
+151	152		Success		10	260.21		2900.69		3160.9		Map Task	HOST_LOCALITY		7		13		2		0
+153	154		Success		8	476.24		2925.9		3402.14		Map Task	RACK_LOCALITY		9		15		4		0
+155	156		Success		7	489.64		2929.56		3419.2		Map Task	RACK_LOCALITY		11		1		6		0
+156	157		Success		14	460.14		2965.55		3425.69		Map Task	RACK_LOCALITY		12		2		7		0
+154	155		Success		13	288.01		2982.34		3270.35		Map Task	HOST_LOCALITY		10		0		5		0
+158	159		Success		15	474.85		3013.07		3487.92		Map Task	RACK_LOCALITY		14		4		9		0
+157	158		Success		11	286.71		3027.19		3313.9		Map Task	HOST_LOCALITY		13		3		8		0
+159	160		Success		6	467.65		3060.75		3528.4		Map Task	RACK_LOCALITY		15		5		10		0
+160	161		Success		15	564.62		3528.4		4093.02		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+161	162		Success		14	574.59		3528.4		4102.99		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+162	163		Success		13	572.67		3528.4		4101.07		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+163	164		Success		12	556.22		3528.4		4084.62		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+164	165		Success		11	567.36		3528.4		4095.76		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+165	166		Success		10	579.63		3528.4		4108.03		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+166	167		Success		9	576.74		3528.4		4105.14		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+167	168		Success		8	569.77		3528.4		4098.17		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+168	169		Success		7	560.56		3528.4		4088.96		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+169	170		Success		6	565.08		3528.4		4093.48		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+170	171		Success		5	565.74		3528.4		4094.14		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+171	172		Success		4	571.47		3528.4		4099.87		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+172	173		Success		3	558.79		3528.4		4087.19		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+173	174		Success		2	560.19		3528.4		4088.59		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+174	175		Success		1	569.13		3528.4		4097.53		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+175	176		Success		0	562.57		3528.4		4090.97		Reduce Task	REMOTE_LOCALITY		-1		-1		-1		0
+
+Number of MapReduce Task:	176.0
+VM Locality Ratio:		54.0		30.68
+Host Locality Ratio:		36.0		20.45
+Rack Locality Ratio:		70.0		39.77
+Remote Locality Ratio:		16.0		9.09
+Start Time:			0.31
+Finish Time:			4108.03
+Total Execution Time:		4107.72
+========== SCHEDULING ALGORITHM OUTPUT ==========
+
+======================================= Simulation Report =======================================

@@ -27,6 +27,7 @@ import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.lists.VmList;
+import org.cloudbus.cloudsim.util.DisplayUtil;
 import org.cloudbus.cloudsim.util.JavaUtil;
 import org.workflowsim.failure.FailureGenerator;
 import org.workflowsim.scheduling.BaseSchedulingAlgorithm;
@@ -332,7 +333,9 @@ public class WorkflowScheduler extends DatacenterBroker {
         	
         	job.setLocalityType(task.getLocalityType());
         	job.setLocalityPenaltyLength(task.getLocalityPenaltyLength());
+        	// DisplayUtil.displayJobProperties(job);
         	job.setCloudletLength(job.getCloudletLength() + job.getLocalityPenaltyLength());
+        	// DisplayUtil.displayJobProperties(job);
         }
     }
     

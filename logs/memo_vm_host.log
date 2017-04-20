@@ -1,0 +1,13 @@
+        //VM Parameters
+        long size = 10000; //image size (MB)
+        int ram = 512; //vm memory (MB)
+        int mips = 1000;
+        long bw = 1000;
+        int pesNumber = 1; //number of cpus
+        String vmm = "Xen"; //VMM name
+
+        
+        int mips = 2000;
+        int ram = 2048; //host memory (MB)
+        long storage = 1000000; //host storage
+        int bw = 10000;

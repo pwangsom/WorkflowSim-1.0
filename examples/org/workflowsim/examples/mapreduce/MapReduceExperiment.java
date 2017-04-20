@@ -15,9 +15,14 @@ import org.workflowsim.utils.JobScheduledResult;
 import org.workflowsim.utils.Parameters;
 
 public class MapReduceExperiment {
+	
+	private static int replicas = 3;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
+		// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
 		
 		List<Parameters.SchedulingAlgorithm> algorithmsList = new ArrayList<Parameters.SchedulingAlgorithm>();
 		algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
@@ -27,7 +32,7 @@ public class MapReduceExperiment {
 		algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
 		int noOfReduceTask = 16;
-		int[] noOfMapTaskList = {2500, 5000, 7500, 10000};
+		int[] noOfMapTaskList = {500};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
 			
@@ -35,29 +40,28 @@ public class MapReduceExperiment {
 				
 				List<JobScheduledResult> resultList = new ArrayList<JobScheduledResult>();
 
-				for (int i = 1; i <= 3; i++) {
+				for (int i = 1; i <= replicas; i++) {
 					String fileName = String.format("mr_%dm_%dr_v%d.xml", noOfMapTaskList[f], noOfReduceTask, i);
 
 					Log.printLine("Starting experiment: Algorthm Name: " + algor + "; File name: " + fileName
 							+ "; Reps no: " + i);
 					
-					resultList.add(runExperiments(algor, fileName));
+					resultList.add(runExperiments(algor, daxPath, fileName));
 				}
 				
-				writeOutputFile(algor, noOfMapTaskList[f], resultList);
-				
+				writeOutputFile(algor, noOfMapTaskList[f], resultList);				
 			}
 						
 		}
 	}
 	
-	private static JobScheduledResult runExperiments(Parameters.SchedulingAlgorithm testAlgor, String fileName){
-		MapReduceSchedulingAlgorithmsInstance instance = new MapReduceSchedulingAlgorithmsInstance(testAlgor, fileName);
-		instance.runAlgorithms();
+	protected static JobScheduledResult runExperiments(Parameters.SchedulingAlgorithm testAlgor, String daxPath, String fileName){
+		MapReduceSchedulingAlgorithmsInstance instance = new MapReduceSchedulingAlgorithmsInstance(testAlgor, daxPath, fileName);
+		instance.run();
 		return instance.getResult();
 	}
 	
-	private static void writeOutputFile(Parameters.SchedulingAlgorithm testAlgor, int noOfMapTask, List<JobScheduledResult> results){
+	protected static void writeOutputFile(Parameters.SchedulingAlgorithm testAlgor, int noOfMapTask, List<JobScheduledResult> results){
 		
 		String pathFile = String.format("./mapreduce/output/%d_%s.csv", noOfMapTask, testAlgor);		
 
@@ -73,9 +77,18 @@ public class MapReduceExperiment {
 		}		
 	}
 	
-	private static List<String> getResultLines(List<JobScheduledResult> results){
+	protected static List<String> getResultLines(List<JobScheduledResult> results){
 		List<String> lines = new ArrayList<String>();
 		DecimalFormat dft = new DecimalFormat("###.##");
+		DecimalFormat dft4 = new DecimalFormat("###.####");
+		
+		double doubleOfTasks = 0.0;
+		double doubleOfVm = 0.0;
+		double doubleOfHosts = 0.0;
+		double doubleOfRack = 0.0;
+		double doubleOfRemote = 0.0;
+		
+		double doubleOfExecutionTime = 0.0;
 		
 		String noOfTasks = ("NoOfTasks,");
 		
@@ -92,7 +105,13 @@ public class MapReduceExperiment {
 		String executionTime = ("ExecutionTime,");
 		
 		for(JobScheduledResult result : results){
+			doubleOfTasks += result.getNumOfTask();
 			noOfTasks = noOfTasks + dft.format(result.getNumOfTask()) + ",";
+			
+			doubleOfVm += result.getNumOfVmLocal();
+			doubleOfHosts += result.getNumOfHostLocal();
+			doubleOfRack += result.getNumOfRackLocal();
+			doubleOfRemote += result.getNumOfRemoteLocal();
 			
 			noOfVm = noOfVm + dft.format(result.getNumOfVmLocal()) + ",";
 			noOfHosts = noOfHosts + dft.format(result.getNumOfHostLocal()) + ",";
@@ -104,8 +123,39 @@ public class MapReduceExperiment {
 			ratioOfRack = ratioOfRack + dft.format(result.getRackLocalRatio()) + ",";
 			ratioOfRemote = ratioOfRemote + dft.format(result.getRemoteLocalRatio()) + ",";			
 
+			doubleOfExecutionTime += result.getTotalExecutetionTime();
 			executionTime = executionTime + dft.format(result.getTotalExecutetionTime()) + ",";
 		}
+		
+		// Column Total
+		noOfTasks = noOfTasks + dft.format(doubleOfTasks) + ",";
+		
+		noOfVm = noOfVm + dft.format(doubleOfVm) + ",";
+		noOfHosts = noOfHosts + dft.format(doubleOfHosts) + ",";
+		noOfRack = noOfRack + dft.format(doubleOfRack) + ",";
+		noOfRemote = noOfRemote + dft.format(doubleOfRemote) + ",";
+		
+		ratioOfVm = ratioOfVm + dft.format((doubleOfVm/doubleOfTasks)*100) + ",";
+		ratioOfHosts = ratioOfHosts + dft.format((doubleOfHosts/doubleOfTasks)*100) + ",";
+		ratioOfRack = ratioOfRack + dft.format((doubleOfRack/doubleOfTasks)*100) + ",";
+		ratioOfRemote = ratioOfRemote + dft.format((doubleOfRemote/doubleOfTasks)*100) + ",";		
+		
+		executionTime = executionTime + dft.format(doubleOfExecutionTime) + ",";
+		
+		//Column AVG
+		noOfTasks = noOfTasks + dft.format(doubleOfTasks/replicas);
+		
+		noOfVm = noOfVm + dft.format(doubleOfVm/replicas);
+		noOfHosts = noOfHosts + dft.format(doubleOfHosts/replicas);
+		noOfRack = noOfRack + dft.format(doubleOfRack/replicas);
+		noOfRemote = noOfRemote + dft.format(doubleOfRemote/replicas);
+		
+		ratioOfVm = ratioOfVm + dft4.format((doubleOfVm/replicas)/(doubleOfTasks/replicas));
+		ratioOfHosts = ratioOfHosts + dft4.format((doubleOfHosts/replicas)/(doubleOfTasks/replicas));
+		ratioOfRack = ratioOfRack + dft4.format((doubleOfRack/replicas)/(doubleOfTasks/replicas));
+		ratioOfRemote = ratioOfRemote + dft4.format((doubleOfRemote/replicas)/(doubleOfTasks/replicas));		
+		
+		executionTime = executionTime + dft.format(doubleOfExecutionTime/replicas);		
 		
 		lines.add(noOfTasks);
 		

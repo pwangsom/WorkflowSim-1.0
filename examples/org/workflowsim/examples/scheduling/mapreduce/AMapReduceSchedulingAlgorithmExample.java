@@ -117,8 +117,8 @@ public class AMapReduceSchedulingAlgorithmExample {
              * Should change this based on real physical path
              */
         	
-        	// String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
-        	String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
+        	String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
+        	// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
         	
         	String fileName = "mr_160m_16r_v2.xml";
         	

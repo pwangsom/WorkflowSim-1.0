@@ -38,28 +38,38 @@ public class MapReduceSchedulingAlgorithmsInstance {
 	private Parameters.SchedulingAlgorithm sch_method = null;
     private Parameters.PlanningAlgorithm pln_method = Parameters.PlanningAlgorithm.INVALID;
     private ReplicaCatalog.FileSystem file_system = ReplicaCatalog.FileSystem.LOCAL;
-    
-	// private String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
-	private String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
 	
+    private String daxPath = null;
 	private String fileName = null;
 	
 	private JobScheduledResult experimentResult;
 	
-	public MapReduceSchedulingAlgorithmsInstance(Parameters.SchedulingAlgorithm algorithms, String fileName){
+	private String threadName;
+	
+	public MapReduceSchedulingAlgorithmsInstance(Parameters.SchedulingAlgorithm algorithms, String daxPath, String fileName){
 		this.sch_method = algorithms;
+		this.daxPath = daxPath;
 		this.fileName = fileName;
+		this.threadName = this.sch_method + "_" + this.fileName;
+		Log.printLine("Creating " + threadName);
 	}
 	
-	public void runAlgorithms(){
-		initCloudSim();
+	public void run() {
+		Log.printLine("Running " + threadName);
+		try {
+			startCloudSim();
+		} catch (Exception e) {
+			Log.printLine("Thread " + threadName + " has been terminated due to an unexpected error.");
+            e.printStackTrace();
+		}
+		Log.printLine("Thread " + threadName + " exiting.");
 	}	
 	
 	public JobScheduledResult getResult(){
 		return this.experimentResult;
 	}
 	
-	private void initCloudSim(){
+	private void startCloudSim(){
         try {
             // First step: Initialize the WorkflowSim package. 
 
@@ -162,7 +172,8 @@ public class MapReduceSchedulingAlgorithmsInstance {
             experimentResult = createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0);
             
             if(!JavaUtil.isNull(experimentResult)){                
-                DisplayUtil.displayJobScheduledResultListShort(experimentResult);            	
+                // DisplayUtil.displayJobScheduledResultListShort(experimentResult);          
+                DisplayUtil.displayJobScheduledResultList(experimentResult);       	
             } else {
                 Log.printLine("There are some errors for this experiment!!!");            	
             }

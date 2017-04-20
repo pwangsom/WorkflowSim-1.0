@@ -51,7 +51,7 @@ public class DataAwareMapReduceAlgorithm extends BaseSchedulingAlgorithm {
 
 			int vmSize = getVmList().size();
 			CondorVM closestVm = null;// (CondorVM)getVmList().get(0);
-			int min_distance = 4;
+			int min_distance = 2;
 			
 			Task task = null;
 
@@ -72,7 +72,7 @@ public class DataAwareMapReduceAlgorithm extends BaseSchedulingAlgorithm {
 							distance = VmRelationship.getRelationshipType(vm.getId(), task.getDataStoredVmId())
 									.distance();
 
-							if (distance < min_distance) {
+							if (distance <= min_distance) {
 								min_distance = distance;
 								closestVm = vm;
 							}
