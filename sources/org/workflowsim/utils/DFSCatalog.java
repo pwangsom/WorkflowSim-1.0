@@ -128,31 +128,37 @@ public class DFSCatalog {
 	
 	public static void printDFSCatalog(List<? extends Cloudlet> cloudletList){
 		
-		List<Job> mapTaskList = getMapTaskList(cloudletList);		
-
-        String indent = "\t";
-		Log.printLine("================ Print DFS Catalog ===================");
-        Log.printLine("User Task ID" + indent
-    				+ "First Copy" + indent
-    				+ "Second Copy" + indent
-    				+ "Third Copy");
-
-        try {
-    		for(Job job : mapTaskList){			
-    			for(Task task : job.getTaskList()){
-    				if(task.getDepth() == 1){
-    					Log.printLine(task.getCloudletId() + indent + indent
-    							+ task.getDataStoredVmIdByIndex(0) + indent + indent
-    							+ task.getDataStoredVmIdByIndex(1) + indent + indent
-    							+ task.getDataStoredVmIdByIndex(2));
-    					break;
-    				}
-    			}
-    		}
+		if(MapReduceParameter.DISPLAY_DFS_CATALOG){
 			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			List<Job> mapTaskList = getMapTaskList(cloudletList);		
+
+	        String indent = "\t";
+			Log.printLine("================ Print DFS Catalog ===================");
+	        Log.printLine("User Task ID" + indent
+	    				+ "First Copy" + indent
+	    				+ "Second Copy" + indent
+	    				+ "Third Copy");
+
+	        try {
+	    		for(Job job : mapTaskList){			
+	    			for(Task task : job.getTaskList()){
+	    				if(task.getDepth() == 1){
+	    					Log.printLine(task.getCloudletId() + indent + indent
+	    							+ task.getDataStoredVmIdByIndex(0) + indent + indent
+	    							+ task.getDataStoredVmIdByIndex(1) + indent + indent
+	    							+ task.getDataStoredVmIdByIndex(2));
+	    					break;
+	    				}
+	    			}
+	    		}
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			
+		} else {
+			Log.printLine("Initial DFS Success!!!");
 		}
 	}
 	
