@@ -21,18 +21,18 @@ public class MapReduceExperiment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
-		// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
+		// String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
+		String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
 		
 		List<Parameters.SchedulingAlgorithm> algorithmsList = new ArrayList<Parameters.SchedulingAlgorithm>();
-		algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
 		algorithmsList.add(Parameters.SchedulingAlgorithm.DATA_MR);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.MAXMIN);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.MAXMIN);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
 		int noOfReduceTask = 16;
-		int[] noOfMapTaskList = {500};
+		int[] noOfMapTaskList = {160, 1000, 2500, 5000, 7500, 10000};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
 			

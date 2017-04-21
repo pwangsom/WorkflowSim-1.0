@@ -1,0 +1,11 @@
+NoOfTasks,7516,7516,7516,
+NoOfVM,6174,6205,6255,
+NoOfHost,311,330,295,
+NoOfRack,619,575,543,
+NoOfRemote,412,406,423,
+RatioOfVM,82.14,82.56,83.22,
+RatioOfHost,4.14,4.39,3.92,
+RatioOfRack,8.24,7.65,7.22,
+RatioOfRemote,5.48,5.4,5.63,
+ExecutionTime,108576.01,107783.43,107724.07,
+
