@@ -37,7 +37,8 @@ public class Parameters {
 
         MAXMIN, MINMIN, MCT, DATA, 
         STATIC, FCFS, ROUNDROBIN, INVALID,
-        FCFS_MR, DATA_MR, DELAY_MR
+        FCFS_MR, DATA_MR, MM_VM_2, MM_HO_2,
+        DELAY_MR, DL_VM_4, DL_HO_4
     }
     
     /**

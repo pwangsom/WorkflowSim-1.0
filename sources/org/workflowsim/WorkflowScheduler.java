@@ -21,14 +21,11 @@ import java.util.List;
 
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.DatacenterBroker;
-import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 import org.cloudbus.cloudsim.lists.VmList;
-import org.cloudbus.cloudsim.util.DisplayUtil;
-import org.cloudbus.cloudsim.util.JavaUtil;
 import org.workflowsim.failure.FailureGenerator;
 import org.workflowsim.scheduling.BaseSchedulingAlgorithm;
 import org.workflowsim.scheduling.DataAwareSchedulingAlgorithm;
@@ -38,9 +35,13 @@ import org.workflowsim.scheduling.MaxMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.MinMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.RoundRobinSchedulingAlgorithm;
 import org.workflowsim.scheduling.StaticSchedulingAlgorithm;
+import org.workflowsim.scheduling.mapreduce.MMHost2MapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.DLHost4MapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.DLVm4MapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DataAwareMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DelayMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.FCFSMapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.MMVm2MapReduceAlgorithm;
 import org.workflowsim.utils.JobScheduledResult;
 import org.workflowsim.utils.LocalityType;
 import org.workflowsim.utils.Parameters;
@@ -181,8 +182,20 @@ public class WorkflowScheduler extends DatacenterBroker {
             case DATA_MR:
             	algorithm = new DataAwareMapReduceAlgorithm();
             	break;
+            case MM_VM_2:
+            	algorithm = new MMVm2MapReduceAlgorithm();
+            	break;
+            case MM_HO_2:
+            	algorithm = new MMHost2MapReduceAlgorithm();
+            	break;
             case DELAY_MR:
             	algorithm = new DelayMapReduceAlgorithm();
+            	break;
+            case DL_VM_4:
+            	algorithm = new DLVm4MapReduceAlgorithm();
+            	break;
+            case DL_HO_4:
+            	algorithm = new DLHost4MapReduceAlgorithm();
             	break;
             default:
                 algorithm = new StaticSchedulingAlgorithm();

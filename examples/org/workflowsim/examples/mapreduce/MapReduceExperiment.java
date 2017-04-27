@@ -19,23 +19,29 @@ import org.workflowsim.utils.Parameters;
 
 public class MapReduceExperiment {
 	
-	private static int replicas = 2;
+	private static int replicas = 1;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
-		String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
+		String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
+		// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
 		
 		List<Parameters.SchedulingAlgorithm> algorithmsList = new ArrayList<Parameters.SchedulingAlgorithm>();
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.DATA_MR);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MAXMIN);
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
+
+		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_VM_2);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_2);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_VM_4);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);
+		
 		int noOfReduceTask = 16;
-		int[] noOfMapTaskList = {1000, 2500, 5000, 7500};
+		int[] noOfMapTaskList = {1000, 2500, 5000};
 		// int[] noOfMapTaskList = {10000};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
@@ -44,7 +50,7 @@ public class MapReduceExperiment {
 				
 				List<JobScheduledResult> resultList = new ArrayList<JobScheduledResult>();
 
-				for (int i = 2; i <= replicas; i++) {
+				for (int i = 1; i <= replicas; i++) {
 					
 					long startTime = System.currentTimeMillis();
 					
@@ -87,7 +93,7 @@ public class MapReduceExperiment {
 	
 	protected static void writeOutputFile(Parameters.SchedulingAlgorithm testAlgor, int noOfMapTask, List<JobScheduledResult> results){
 		
-		String pathFile = String.format("./mapreduce/output/Exp6/%d_%s.csv", noOfMapTask, testAlgor);		
+		String pathFile = String.format("./mapreduce/output/FIFO_MM_DL/Exp1/%d_%s.csv", noOfMapTask, testAlgor);		
 
 		List<String> lines = new ArrayList<String>();
 		lines.addAll(getResultLines(results));

@@ -120,7 +120,7 @@ public class AMapReduceSchedulingAlgorithmExample {
         	String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
         	// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
         	
-        	String fileName = "mr_160m_16r_v2.xml";
+        	String fileName = "mr_1000m_16r_v2.xml";
         	
         	daxPath = daxPath + fileName;
         	
@@ -137,7 +137,7 @@ public class AMapReduceSchedulingAlgorithmExample {
              * algorithm should be static such that the scheduler would not
              * override the result of the planner
              */
-            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DATA_MR;
+            Parameters.SchedulingAlgorithm sch_method = Parameters.SchedulingAlgorithm.DL_HO_4;
             Parameters.PlanningAlgorithm pln_method = Parameters.PlanningAlgorithm.INVALID;
             ReplicaCatalog.FileSystem file_system = ReplicaCatalog.FileSystem.LOCAL;
 

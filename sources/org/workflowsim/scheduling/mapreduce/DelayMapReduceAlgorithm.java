@@ -34,8 +34,8 @@ import org.workflowsim.utils.VmRelationship;
  */
 public class DelayMapReduceAlgorithm extends BaseSchedulingAlgorithm {
 	
-	private int satisfyLocality = 0;
-	private int delayCount = 2;
+	protected int satisfyLocality = 0;
+	protected int delayCount = 0;
 
 	public DelayMapReduceAlgorithm() {
 		super();
