@@ -15,11 +15,11 @@ import org.cloudbus.cloudsim.Log;
 public class DaxFileGenerator {
 	// TODO Auto-generated method stub
 	
-	private final static int numOfMapTask = 500;
+	private final static int numOfMapTask = 10000;
 	private final static int numOfReduceTask = 16;
 	
-	private final static double minMapRuntime = 150.00;
-	private final static double maxMapRuntime = 199.99;		
+	private final static double minMapRuntime = 160.00;
+	private final static double maxMapRuntime = 189.99;		
 
 	private final static double minReduceRuntime = 50.00;
 	private final static double maxReduceRuntime = 79.99;
