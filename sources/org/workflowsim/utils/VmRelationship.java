@@ -1,6 +1,5 @@
 package org.workflowsim.utils;
 
-import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 
 public class VmRelationship {

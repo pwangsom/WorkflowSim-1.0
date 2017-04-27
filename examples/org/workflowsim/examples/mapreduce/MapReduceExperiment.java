@@ -6,8 +6,11 @@ import static java.nio.file.StandardOpenOption.CREATE;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.cloudbus.cloudsim.Log;
@@ -16,7 +19,7 @@ import org.workflowsim.utils.Parameters;
 
 public class MapReduceExperiment {
 	
-	private static int replicas = 3;
+	private static int replicas = 2;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -26,13 +29,14 @@ public class MapReduceExperiment {
 		
 		List<Parameters.SchedulingAlgorithm> algorithmsList = new ArrayList<Parameters.SchedulingAlgorithm>();
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.DATA_MR);
-		// algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.DATA_MR);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.DELAY_MR);
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MAXMIN);
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
 		int noOfReduceTask = 16;
-		int[] noOfMapTaskList = {160, 1000, 2500, 5000, 7500, 10000};
+		int[] noOfMapTaskList = {1000, 2500, 5000, 7500};
+		// int[] noOfMapTaskList = {10000};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
 			
@@ -40,13 +44,33 @@ public class MapReduceExperiment {
 				
 				List<JobScheduledResult> resultList = new ArrayList<JobScheduledResult>();
 
-				for (int i = 1; i <= replicas; i++) {
+				for (int i = 2; i <= replicas; i++) {
+					
+					long startTime = System.currentTimeMillis();
+					
+					Log.printLine("=============================================================================");
+					Log.printLine("=========================== Start Experiment ================================");
+					
 					String fileName = String.format("mr_%dm_%dr_v%d.xml", noOfMapTaskList[f], noOfReduceTask, i);
-
-					Log.printLine("Starting experiment: Algorthm Name: " + algor + "; File name: " + fileName
+					Log.printLine(getCurrentDateTimeString() + ": Starting experiment: Algorthm Name: " 
+							+ algor + "; File name: " + fileName
 							+ "; Reps no: " + i);
 					
 					resultList.add(runExperiments(algor, daxPath, fileName));
+					
+				
+					Log.printLine(getCurrentDateTimeString() + ": Exiting experiment: Algorthm Name: " 
+							+ algor + "; File name: " + fileName
+							+ "; Reps no: " + i);
+					
+					
+					long finishTime = System.currentTimeMillis();
+					
+					Log.printLine("Experiment time: " + getDurationTimeString(startTime, finishTime));
+
+					Log.printLine("=========================== Finish Experiment ===============================");
+					Log.printLine("=============================================================================");
+					Log.printLine("");
 				}
 				
 				writeOutputFile(algor, noOfMapTaskList[f], resultList);				
@@ -63,7 +87,7 @@ public class MapReduceExperiment {
 	
 	protected static void writeOutputFile(Parameters.SchedulingAlgorithm testAlgor, int noOfMapTask, List<JobScheduledResult> results){
 		
-		String pathFile = String.format("./mapreduce/output/%d_%s.csv", noOfMapTask, testAlgor);		
+		String pathFile = String.format("./mapreduce/output/Exp6/%d_%s.csv", noOfMapTask, testAlgor);		
 
 		List<String> lines = new ArrayList<String>();
 		lines.addAll(getResultLines(results));
@@ -127,7 +151,7 @@ public class MapReduceExperiment {
 			executionTime = executionTime + dft.format(result.getTotalExecutetionTime()) + ",";
 		}
 		
-		// Column Total
+/*		// Column Total
 		noOfTasks = noOfTasks + dft.format(doubleOfTasks) + ",";
 		
 		noOfVm = noOfVm + dft.format(doubleOfVm) + ",";
@@ -156,7 +180,7 @@ public class MapReduceExperiment {
 		ratioOfRemote = ratioOfRemote + dft4.format((doubleOfRemote/replicas)/(doubleOfTasks/replicas));		
 		
 		executionTime = executionTime + dft.format(doubleOfExecutionTime/replicas);		
-		
+*/		
 		lines.add(noOfTasks);
 		
 		lines.add(noOfVm);
@@ -172,6 +196,28 @@ public class MapReduceExperiment {
 		lines.add(executionTime);
 		
 		return lines;
+	}
+	
+	private static String getCurrentDateTimeString(){
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		return dateFormat.format(date); //2016/11/16 12:08:43
+	}
+	
+	private static String getDurationTimeString(long startTime, long finishTime){
+		
+		Date d1 = new Date(startTime);
+		Date d2 = new Date(finishTime);
+
+		//in milliseconds
+		long diff = d2.getTime() - d1.getTime();
+
+		long diffSeconds = diff / 1000 % 60;
+		long diffMinutes = diff / (60 * 1000) % 60;
+		long diffHours = diff / (60 * 60 * 1000) % 24;
+		long diffDays = diff / (24 * 60 * 60 * 1000);
+		
+		return diffDays + " days, " + diffHours + " hours, " + diffMinutes + " minutes, " + diffSeconds + " seconds.";
 	}
 
 }

@@ -172,8 +172,8 @@ public class MapReduceSchedulingAlgorithmsInstance {
             experimentResult = createJobScheduledResultList(wfEngine.getScheduler(0).getScheduledJob(), outputList0);
             
             if(!JavaUtil.isNull(experimentResult)){                
-                // DisplayUtil.displayJobScheduledResultListShort(experimentResult);          
-                DisplayUtil.displayJobScheduledResultList(experimentResult);       	
+                DisplayUtil.displayJobScheduledResultListShort(experimentResult);          
+                // DisplayUtil.displayJobScheduledResultList(experimentResult);       	
             } else {
                 Log.printLine("There are some errors for this experiment!!!");            	
             }

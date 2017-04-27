@@ -2,10 +2,16 @@ package org.workflowsim.utils;
 
 public enum LocalityType {
 	
-    VM_LOCALITY(0, 0),
+/*    VM_LOCALITY(0, 0),
     HOST_LOCALITY(1, 100000),
     RACK_LOCALITY(2, 300000),
     REMOTE_LOCALITY(3, 500000),
+	UNDEFINED(4, 0);*/
+	
+    VM_LOCALITY(0, 0),
+    HOST_LOCALITY(1, 67000),
+    RACK_LOCALITY(2, 268000),
+    REMOTE_LOCALITY(3, 402000),
 	UNDEFINED(4, 0);
     
     private int distance;
