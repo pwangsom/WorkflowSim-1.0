@@ -24,8 +24,8 @@ public class MapReduceExperiment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
-		// String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
+		// String daxPath = "C://Users/Dell/git/WorkflowSim-1.0/mapreduce/input/";
+		String daxPath = "D://Users-Profiles/Peerasak/git/WorkflowSim-1.0/mapreduce/input/";
 		
 		List<Parameters.SchedulingAlgorithm> algorithmsList = new ArrayList<Parameters.SchedulingAlgorithm>();
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.FCFS_MR);
@@ -41,8 +41,8 @@ public class MapReduceExperiment {
 		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);
 		
 		int noOfReduceTask = 16;
-		int[] noOfMapTaskList = {1000, 2500, 5000};
-		// int[] noOfMapTaskList = {10000};
+		// int[] noOfMapTaskList = {1000, 2500, 5000};
+		int[] noOfMapTaskList = {7500};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
 			
