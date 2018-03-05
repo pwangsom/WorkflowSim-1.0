@@ -35,12 +35,10 @@ public class MapReduceExperiment {
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
 
-		// algorithmsList.add(Parameters.SchedulingAlgorithm.MM_VM_2);
-		// algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_2);
-		// algorithmsList.add(Parameters.SchedulingAlgorithm.DL_VM_4);
-		// algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);		
-
-		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_NEW);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_VM_2);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_2);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_VM_4);
+		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);
 		
 		int noOfReduceTask = 16;
 		int[] noOfMapTaskList = {1000, 2500};
