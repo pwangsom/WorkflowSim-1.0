@@ -35,12 +35,13 @@ import org.workflowsim.scheduling.MaxMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.MinMinSchedulingAlgorithm;
 import org.workflowsim.scheduling.RoundRobinSchedulingAlgorithm;
 import org.workflowsim.scheduling.StaticSchedulingAlgorithm;
-import org.workflowsim.scheduling.mapreduce.MMHost2MapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DLHost4MapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DLVm4MapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DataAwareMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.DelayMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.FCFSMapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.MMHost2MapReduceAlgorithm;
+import org.workflowsim.scheduling.mapreduce.MMHostNewMapReduceAlgorithm;
 import org.workflowsim.scheduling.mapreduce.MMVm2MapReduceAlgorithm;
 import org.workflowsim.utils.JobScheduledResult;
 import org.workflowsim.utils.LocalityType;
@@ -187,6 +188,9 @@ public class WorkflowScheduler extends DatacenterBroker {
             	break;
             case MM_HO_2:
             	algorithm = new MMHost2MapReduceAlgorithm();
+            	break;
+            case MM_HO_NEW:
+            	algorithm = new MMHostNewMapReduceAlgorithm();
             	break;
             case DELAY_MR:
             	algorithm = new DelayMapReduceAlgorithm();

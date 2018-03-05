@@ -35,14 +35,16 @@ public class MapReduceExperiment {
 		// algorithmsList.add(Parameters.SchedulingAlgorithm.MINMIN);
 		
 
-		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_VM_2);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_2);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_VM_4);
-		algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.MM_VM_2);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_2);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.DL_VM_4);
+		// algorithmsList.add(Parameters.SchedulingAlgorithm.DL_HO_4);		
+
+		algorithmsList.add(Parameters.SchedulingAlgorithm.MM_HO_NEW);
 		
 		int noOfReduceTask = 16;
-		// int[] noOfMapTaskList = {1000, 2500, 5000};
-		int[] noOfMapTaskList = {7500};
+		int[] noOfMapTaskList = {1000, 2500};
+		// int[] noOfMapTaskList = {7500};
 		
 		for (int f = 0; f < noOfMapTaskList.length; f++) {
 			
@@ -93,7 +95,7 @@ public class MapReduceExperiment {
 	
 	protected static void writeOutputFile(Parameters.SchedulingAlgorithm testAlgor, int noOfMapTask, List<JobScheduledResult> results){
 		
-		String pathFile = String.format("./mapreduce/output/FIFO_MM_DL/Exp1/%d_%s.csv", noOfMapTask, testAlgor);		
+		String pathFile = String.format("./mapreduce/output/MM_HOST_NEW/Exp4/%d_%s.csv", noOfMapTask, testAlgor);		
 
 		List<String> lines = new ArrayList<String>();
 		lines.addAll(getResultLines(results));

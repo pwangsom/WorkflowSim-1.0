@@ -8,12 +8,33 @@ public enum LocalityType {
     REMOTE_LOCALITY(3, 500000),
 	UNDEFINED(4, 0);*/
 	
-    VM_LOCALITY(0, 0),
+/*    VM_LOCALITY(0, 0),
     HOST_LOCALITY(1, 67000),
     RACK_LOCALITY(2, 268000),
     REMOTE_LOCALITY(3, 402000),
-	UNDEFINED(4, 0);
+	UNDEFINED(4, 0);*/
+	
+/*    VM_LOCALITY(0, 0),
+    HOST_LOCALITY(1, 488000),
+    RACK_LOCALITY(2, 1952000),
+    REMOTE_LOCALITY(3, 2928000),
+	UNDEFINED(4, 0);*/
     
+
+/*    VM_LOCALITY(0, 0),
+    HOST_LOCALITY(1, 48000),
+    RACK_LOCALITY(2, 192000),
+    REMOTE_LOCALITY(3, 288000),
+	UNDEFINED(4, 0);*/
+	
+	
+	VM_LOCALITY(0, 0),
+    HOST_LOCALITY(1, 48800),
+    RACK_LOCALITY(2, 195200),
+    REMOTE_LOCALITY(3, 292800),
+	UNDEFINED(4, 0);
+	
+	
     private int distance;
     private long penaltyLength;
 	
